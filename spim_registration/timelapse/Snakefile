@@ -64,8 +64,6 @@ rule define_xml_czi:
         cmd_string += " > {log} 2>&1"
         shell(cmd_string)
 
-
-
 # defining xml for tif dataset
 rule define_xml_tif:
     input: glob.glob(re.sub("{{.}}","*", config["common"]['image_file_pattern'])) #replaces all occurrences of {{a}} (a can be any character) by * to use the string for globbing
@@ -104,7 +102,14 @@ rule define_xml_tif:
         cmd_string +=" > {log} 2>&1"
         shell(cmd_string)
 
-ruleorder: define_xml_czi > define_xml_tif
+# Defining XML for KLB datasets
+rule define_xml_klb:
+    input: config["common"]["klb_root_directory"]
+    output: config["common"]["hdf5_xml_filename"].strip('\"') + "_first.xml"
+    log: "logs/a1_define_xml_klb.log"
+    shell: produce_string("{python-prefix} {klb_xml_define_script}", config["common"], klb_xml_define_script=os.path.join(config["common"]["bsh_directory"],config["define_xml_klb"]["python_file"])) + "-b {input} -o {output} " + produce_string("-r {x_res},{y_res},{z_res} ", config["common"], config["define_xml_klb"]) + "> {log} 2>&1"
+
+ruleorder: define_xml_klb > define_xml_czi > define_xml_tif
 
 # create mother .xml/.h5
 rule hdf5_xml:
