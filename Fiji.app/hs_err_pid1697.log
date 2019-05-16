@@ -1,0 +1,1707 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007fa70f35cd36, pid=1697, tid=140356422534912
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_66-b17) (build 1.8.0_66-b17)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.66-b17 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libnvidia-glcore.so.410.104+0xf48d36]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000003e7b000):  JavaThread "AWT-EventQueue-0" [_thread_in_native, id=1888, stack(0x00007fa746a50000,0x00007fa746b51000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000000, RCX=0x00007fa70c3af1d8, RDX=0x0000000000000000
+RSP=0x00007fa746b4e060, RBP=0x0000000000000003, RSI=0x0000000000000003, RDI=0x00007fa70c3af1d8
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x0000000000000000, R11=0x0000000000000004
+R12=0x0000000000000000, R13=0x0000000000000000, R14=0x00000000406eb000, R15=0x0000000000000690
+RIP=0x00007fa70f35cd36, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fa746b4e060)
+0x00007fa746b4e060:   00000000406eb000 00007fa746b4e110
+0x00007fa746b4e070:   00007fa7307427b0 00007fa7307427a0
+0x00007fa746b4e080:   00000000406eb000 00007fa72f911c08
+0x00007fa746b4e090:   0000000000000000 00007fa70f36f248
+0x00007fa746b4e0a0:   0000000000000000 0000000000000000
+0x00007fa746b4e0b0:   0000000000000000 0000000000000000
+0x00007fa746b4e0c0:   00000000407799a0 00007fa746b4e110
+0x00007fa746b4e0d0:   0000140500000001 ffffffff00000006
+0x00007fa746b4e0e0:   0000000400000000 00007fa72f912210
+0x00007fa746b4e0f0:   00007fa72c19f2b0 01007fa70f3275de
+0x00007fa746b4e100:   0100000000000001 00007fa746b50700
+0x00007fa746b4e110:   0000000000000000 00000000407358e0
+0x00007fa746b4e120:   00000000406eb000 00007fa72c19f2b0
+0x00007fa746b4e130:   0000000000000000 00007fa70f3355ae
+0x00007fa746b4e140:   00007fb013b34c80 0000000040735cd0
+0x00007fa746b4e150:   0000000040755b30 0000001003a00383
+0x00007fa746b4e160:   00000000406eb1f8 00007fa72c19f2b0
+0x00007fa746b4e170:   00007fa71c099470 0100000003e7b000
+0x00007fa746b4e180:   00007fa72c19f2b0 00000000406eb200
+0x00007fa746b4e190:   00007fa7406eb001 00007fa746b50700
+0x00007fa746b4e1a0:   0000000000000020 0000000000000004
+0x00007fa746b4e1b0:   00007fa746b4e200 00007fb0138c47bc
+0x00007fa746b4e1c0:   00007fb0039e45d0 0000000000000000
+0x00007fa746b4e1d0:   00007fa746b4e3a0 0000000003e7b000
+0x00007fa746b4e1e0:   0000000000000004 0000000000000000
+0x00007fa746b4e1f0:   0000000001efd500 000000000000000e
+0x00007fa746b4e200:   00007fa746b4e250 00007fb0138c49fe
+0x00007fa746b4e210:   00007fa72358a941 00007fa7000000b6
+0x00007fa746b4e220:   0000000100000006 00007fa746b4e0a0
+0x00007fa746b4e230:   00007fa700000000 0000000001efd500
+0x00007fa746b4e240:   0100000000000001 00007fa746b50700
+0x00007fa746b4e250:   0000000000000000 0080000000000000 
+
+Instructions: (pc=0x00007fa70f35cd36)
+0x00007fa70f35cd16:   70 73 78 89 e8 48 8d 7a 04 41 29 ec c1 e0 10 89
+0x00007fa70f35cd26:   ee 0d 7c 05 00 60 48 89 f9 89 02 4c 89 ea 89 d8
+0x00007fa70f35cd36:   03 02 66 89 01 89 d8 03 42 04 48 83 c2 08 66 89
+0x00007fa70f35cd46:   41 02 48 83 c1 04 ff ce 75 e4 8d 45 ff 45 85 e4 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000000000000000 is an unknown value
+RCX=0x00007fa70c3af1d8 is an unknown value
+RDX=0x0000000000000000 is an unknown value
+RSP=0x00007fa746b4e060 is pointing into the stack for thread: 0x0000000003e7b000
+RBP=0x0000000000000003 is an unknown value
+RSI=0x0000000000000003 is an unknown value
+RDI=0x00007fa70c3af1d8 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000004 is an unknown value
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000000000 is an unknown value
+R14=0x00000000406eb000 is an unknown value
+R15=0x0000000000000690 is an unknown value
+
+
+Stack: [0x00007fa746a50000,0x00007fa746b51000],  sp=0x00007fa746b4e060,  free space=1016k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libnvidia-glcore.so.410.104+0xf48d36]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 7904  jogamp.opengl.gl4.GL4bcImpl.dispatch_glDrawElements1(IIIJJ)V (0 bytes) @ 0x00007fb004c96097 [0x00007fb004c96040+0x57]
+j  jogamp.opengl.gl4.GL4bcImpl.glDrawElements(IIIJ)V+53
+J 9169 C1 tpietzsch.offscreen.OffScreenFrameBufferWithDepth.drawQuad(Lcom/jogamp/opengl/GL3;II)V (132 bytes) @ 0x00007fb00516887c [0x00007fb0051676e0+0x119c]
+J 9166 C1 tpietzsch.example2.VolumeViewerPanel$3.display(Lcom/jogamp/opengl/GLAutoDrawable;)V (271 bytes) @ 0x00007fb0051655e4 [0x00007fb005164720+0xec4]
+J 9165 C1 jogamp.opengl.GLDrawableHelper.displayImpl(Lcom/jogamp/opengl/GLAutoDrawable;)V (86 bytes) @ 0x00007fb005162e5c [0x00007fb005161f60+0xefc]
+J 9163 C1 com.jogamp.opengl.awt.GLCanvas$11.run()V (122 bytes) @ 0x00007fb003e861c4 [0x00007fb003e85b00+0x6c4]
+J 9162 C1 jogamp.opengl.GLDrawableHelper.invokeGLImpl(Lcom/jogamp/opengl/GLDrawable;Lcom/jogamp/opengl/GLContext;Ljava/lang/Runnable;Ljava/lang/Runnable;)V (579 bytes) @ 0x00007fb00515ed8c [0x00007fb00515de20+0xf6c]
+J 8687 C1 jogamp.opengl.GLDrawableHelper.invokeGL(Lcom/jogamp/opengl/GLDrawable;Lcom/jogamp/opengl/GLContext;Ljava/lang/Runnable;Ljava/lang/Runnable;)V (76 bytes) @ 0x00007fb00501f464 [0x00007fb00501f380+0xe4]
+J 8683 C1 com.jogamp.opengl.awt.GLCanvas$12.run()V (126 bytes) @ 0x00007fb00501cc24 [0x00007fb00501c500+0x724]
+J 5481 C1 java.awt.event.InvocationEvent.dispatch()V (69 bytes) @ 0x00007fb00467fec4 [0x00007fb00467fd40+0x184]
+J 9124 C2 java.awt.EventQueue$3.run()Ljava/lang/Object; (5 bytes) @ 0x00007fb005139d34 [0x00007fb005139980+0x3b4]
+v  ~StubRoutines::call_stub
+J 2400  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object; (0 bytes) @ 0x00007fb003b97d3b [0x00007fb003b97cc0+0x7b]
+J 9122 C2 java.awt.EventDispatchThread.pumpOneEventForFilters(I)V (295 bytes) @ 0x00007fb005132fb8 [0x00007fb005132960+0x658]
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+35
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007fa6c0004800 JavaThread "ForkJoinPool-1-worker-7" daemon [_thread_blocked, id=3546, stack(0x00007fa6ba03e000,0x00007fa6ba13f000)]
+  0x00007fa6c0003000 JavaThread "ForkJoinPool-1-worker-14" daemon [_thread_blocked, id=3545, stack(0x00007fa6b9d3b000,0x00007fa6b9e3c000)]
+  0x00007fa6c0001000 JavaThread "ForkJoinPool-1-worker-10" daemon [_thread_blocked, id=3541, stack(0x00007fa6d1f43000,0x00007fa6d2044000)]
+  0x00007fa730740800 JavaThread "PainterThread" daemon [_thread_blocked, id=2540, stack(0x00007fa714e36000,0x00007fa714f37000)]
+  0x00007fa73071e800 JavaThread "SciJava-6a282fdd-Thread-1-SharedResourceRunner" daemon [_thread_blocked, id=2538, stack(0x00007fa72003f000,0x00007fa720140000)]
+  0x00007fa7306fd000 JavaThread "SciJava-6a282fdd-Thread-1-SharedResourceRunner" daemon [_thread_blocked, id=2537, stack(0x00007fa744069000,0x00007fa74416a000)]
+  0x00007fa7304f5000 JavaThread "Fetcher-0" daemon [_thread_blocked, id=2504, stack(0x00007fa7c0ba4000,0x00007fa7c0ca5000)]
+  0x00007fa72c03c000 JavaThread "TimerQueue" daemon [_thread_blocked, id=1906, stack(0x00007fa744e78000,0x00007fa744f79000)]
+  0x0000000001d93000 JavaThread "DestroyJavaVM" [_thread_blocked, id=1697, stack(0x00007ffd4830b000,0x00007ffd4840b000)]
+=>0x0000000003e7b000 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=1888, stack(0x00007fa746a50000,0x00007fa746b51000)]
+  0x0000000003e78000 JavaThread "AWT-Shutdown" [_thread_blocked, id=1887, stack(0x00007fa746b51000,0x00007fa746c52000)]
+  0x000000000317b800 JavaThread "AWT-XAWT" daemon [_thread_blocked, id=1886, stack(0x00007fa746c52000,0x00007fa746d53000)]
+  0x000000000316b800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=1885, stack(0x00007fa7c00a3000,0x00007fa7c01a4000)]
+  0x00000000037e2800 JavaThread "Timer-0" daemon [_thread_blocked, id=1874, stack(0x00007fa7c10cd000,0x00007fa7c11ce000)]
+  0x0000000001ef9000 JavaThread "Service Thread" daemon [_thread_blocked, id=1736, stack(0x00007fa7c24ae000,0x00007fa7c25af000)]
+  0x0000000001ee3800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=1735, stack(0x00007fa7c25b0000,0x00007fa7c26b0000)]
+  0x0000000001ee1800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=1734, stack(0x00007fa7c26b1000,0x00007fa7c27b1000)]
+  0x0000000001edf800 JavaThread "C2 CompilerThread1" daemon [_thread_in_vm, id=1733, stack(0x00007fa7c27b2000,0x00007fa7c28b2000)]
+  0x0000000001edd800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=1732, stack(0x00007fa7c28b3000,0x00007fa7c29b3000)]
+  0x0000000001edc000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=1731, stack(0x00007fa7c29b3000,0x00007fa7c2ab4000)]
+  0x0000000001ed8000 JavaThread "Surrogate Locker Thread (Concurrent GC)" daemon [_thread_blocked, id=1730, stack(0x00007fa7c2ab4000,0x00007fa7c2bb5000)]
+  0x0000000001ea2800 JavaThread "Finalizer" daemon [_thread_blocked, id=1721, stack(0x00007fa7c2bb5000,0x00007fa7c2cb6000)]
+  0x0000000001ea0800 JavaThread "Reference Handler" daemon [_thread_blocked, id=1720, stack(0x00007fa7c2cb6000,0x00007fa7c2db7000)]
+
+Other Threads:
+  0x0000000001e9b800 VMThread [stack: 0x00007fa7c2db8000,0x00007fa7c2eb8000] [id=1719]
+  0x0000000001efc000 WatcherThread [stack: 0x00007fa7c23ae000,0x00007fa7c24ae000] [id=1746]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ par new generation   total 309056K, used 254957K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K,  84% used [0x00007fa7eb800000, 0x00007fa7f9b27898, 0x00007fa7fc450000)
+  from space 34304K,  65% used [0x00007fa7fe5d0000, 0x00007fa7ffba3c60, 0x00007fa800750000)
+  to   space 34304K,   0% used [0x00007fa7fc450000, 0x00007fa7fc450000, 0x00007fa7fe5d0000)
+ concurrent mark-sweep generation total 1471812K, used 895620K [0x00007fa815190000, 0x00007fa86eee1000, 0x00007fafdc000000)
+ Metaspace       used 73205K, capacity 74690K, committed 75160K, reserved 1114112K
+  class space    used 10300K, capacity 10814K, committed 10824K, reserved 1048576K
+
+Card table byte_map: [0x00007fafe007b000,0x00007fafe4000000] byte_map_base: 0x00007f700c11f000
+
+Marking Bits: (CMSBitMap*) 0x0000000001e1ce58
+ Bits: [0x00007fa7c860e000, 0x00007fa7e77c7c00)
+
+Mod Union Table: (CMSBitMap*) 0x0000000001e1cf18
+ Bits: [0x00007fb00204a000, 0x00007fb002810e70)
+
+Polling page: 0x00007fb01bada000
+
+CodeCache: size=245760Kb used=24486Kb max_used=24875Kb free=221273Kb
+ bounds [0x00007fb0039df000, 0x00007fb00525f000, 0x00007fb0129df000]
+ total_blobs=8704 nmethods=7487 adapters=1127
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 216.775 Thread 0x0000000001ee3800 nmethod 9432 0x00007fb004cbbd50 code [0x00007fb004cbbee0, 0x00007fb004cbc050]
+Event: 216.775 Thread 0x0000000001ee3800 9429       3       sun.awt.X11.XWindow::reshape (53 bytes)
+Event: 216.775 Thread 0x0000000001ee3800 nmethod 9429 0x00007fb004ca9e10 code [0x00007fb004ca9fa0, 0x00007fb004caa408]
+Event: 216.775 Thread 0x0000000001ee3800 9430       3       sun.awt.X11.XWindow::layout (1 bytes)
+Event: 216.775 Thread 0x0000000001ee3800 nmethod 9430 0x00007fb004e489d0 code [0x00007fb004e48b20, 0x00007fb004e48c90]
+Event: 216.782 Thread 0x0000000001ee3800 9433       3       com.jogamp.opengl.GLContext::appendString (25 bytes)
+Event: 216.783 Thread 0x0000000001ee3800 nmethod 9433 0x00007fb004f0e190 code [0x00007fb004f0e320, 0x00007fb004f0e758]
+Event: 216.785 Thread 0x0000000001ee1800 9434       4       net.imglib2.img.AbstractImg::<init> (63 bytes)
+Event: 216.790 Thread 0x0000000001ee1800 nmethod 9434 0x00007fb00509c850 code [0x00007fb00509c9e0, 0x00007fb00509cd98]
+Event: 216.808 Thread 0x0000000001edf800 9435       4       java.awt.EventQueue::postEvent (172 bytes)
+
+GC Heap History (10 events):
+Event: 201.093 GC heap before
+{Heap before GC invocations=22 (full 8):
+ par new generation   total 309056K, used 309056K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K, 100% used [0x00007fa7eb800000, 0x00007fa7fc450000, 0x00007fa7fc450000)
+  from space 34304K, 100% used [0x00007fa7fc450000, 0x00007fa7fe5d0000, 0x00007fa7fe5d0000)
+  to   space 34304K,   0% used [0x00007fa7fe5d0000, 0x00007fa7fe5d0000, 0x00007fa800750000)
+ concurrent mark-sweep generation total 1449036K, used 869049K [0x00007fa815190000, 0x00007fa86d8a3000, 0x00007fafdc000000)
+ Metaspace       used 73176K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10297K, capacity 10813K, committed 10824K, reserved 1048576K
+Event: 201.190 GC heap after
+Heap after GC invocations=23 (full 8):
+ par new generation   total 309056K, used 30728K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K,   0% used [0x00007fa7eb800000, 0x00007fa7eb800000, 0x00007fa7fc450000)
+  from space 34304K,  89% used [0x00007fa7fe5d0000, 0x00007fa8003d2148, 0x00007fa800750000)
+  to   space 34304K,   0% used [0x00007fa7fc450000, 0x00007fa7fc450000, 0x00007fa7fe5d0000)
+ concurrent mark-sweep generation total 1449036K, used 901962K [0x00007fa815190000, 0x00007fa86d8a3000, 0x00007fafdc000000)
+ Metaspace       used 73176K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10297K, capacity 10813K, committed 10824K, reserved 1048576K
+}
+Event: 203.531 GC heap before
+{Heap before GC invocations=23 (full 9):
+ par new generation   total 309056K, used 305480K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K, 100% used [0x00007fa7eb800000, 0x00007fa7fc450000, 0x00007fa7fc450000)
+  from space 34304K,  89% used [0x00007fa7fe5d0000, 0x00007fa8003d2148, 0x00007fa800750000)
+  to   space 34304K,   0% used [0x00007fa7fc450000, 0x00007fa7fc450000, 0x00007fa7fe5d0000)
+ concurrent mark-sweep generation total 1449036K, used 901962K [0x00007fa815190000, 0x00007fa86d8a3000, 0x00007fafdc000000)
+ Metaspace       used 73176K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10297K, capacity 10813K, committed 10824K, reserved 1048576K
+Event: 203.549 GC heap after
+Heap after GC invocations=24 (full 9):
+ par new generation   total 309056K, used 9970K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K,   0% used [0x00007fa7eb800000, 0x00007fa7eb800000, 0x00007fa7fc450000)
+  from space 34304K,  29% used [0x00007fa7fc450000, 0x00007fa7fce0cb20, 0x00007fa7fe5d0000)
+  to   space 34304K,   0% used [0x00007fa7fe5d0000, 0x00007fa7fe5d0000, 0x00007fa800750000)
+ concurrent mark-sweep generation total 1449036K, used 901962K [0x00007fa815190000, 0x00007fa86d8a3000, 0x00007fafdc000000)
+ Metaspace       used 73176K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10297K, capacity 10813K, committed 10824K, reserved 1048576K
+}
+Event: 205.301 GC heap before
+{Heap before GC invocations=24 (full 9):
+ par new generation   total 309056K, used 284722K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K, 100% used [0x00007fa7eb800000, 0x00007fa7fc450000, 0x00007fa7fc450000)
+  from space 34304K,  29% used [0x00007fa7fc450000, 0x00007fa7fce0cb20, 0x00007fa7fe5d0000)
+  to   space 34304K,   0% used [0x00007fa7fe5d0000, 0x00007fa7fe5d0000, 0x00007fa800750000)
+ concurrent mark-sweep generation total 1449036K, used 901962K [0x00007fa815190000, 0x00007fa86d8a3000, 0x00007fafdc000000)
+ Metaspace       used 73177K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10298K, capacity 10813K, committed 10824K, reserved 1048576K
+Event: 205.321 GC heap after
+Heap after GC invocations=25 (full 9):
+ par new generation   total 309056K, used 7937K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K,   0% used [0x00007fa7eb800000, 0x00007fa7eb800000, 0x00007fa7fc450000)
+  from space 34304K,  23% used [0x00007fa7fe5d0000, 0x00007fa7fed90728, 0x00007fa800750000)
+  to   space 34304K,   0% used [0x00007fa7fc450000, 0x00007fa7fc450000, 0x00007fa7fe5d0000)
+ concurrent mark-sweep generation total 1449036K, used 901962K [0x00007fa815190000, 0x00007fa86d8a3000, 0x00007fafdc000000)
+ Metaspace       used 73177K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10298K, capacity 10813K, committed 10824K, reserved 1048576K
+}
+Event: 207.009 GC heap before
+{Heap before GC invocations=25 (full 9):
+ par new generation   total 309056K, used 282689K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K, 100% used [0x00007fa7eb800000, 0x00007fa7fc450000, 0x00007fa7fc450000)
+  from space 34304K,  23% used [0x00007fa7fe5d0000, 0x00007fa7fed90728, 0x00007fa800750000)
+  to   space 34304K,   0% used [0x00007fa7fc450000, 0x00007fa7fc450000, 0x00007fa7fe5d0000)
+ concurrent mark-sweep generation total 1471812K, used 883085K [0x00007fa815190000, 0x00007fa86eee1000, 0x00007fafdc000000)
+ Metaspace       used 73177K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10298K, capacity 10813K, committed 10824K, reserved 1048576K
+Event: 207.059 GC heap after
+Heap after GC invocations=26 (full 9):
+ par new generation   total 309056K, used 24994K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K,   0% used [0x00007fa7eb800000, 0x00007fa7eb800000, 0x00007fa7fc450000)
+  from space 34304K,  72% used [0x00007fa7fc450000, 0x00007fa7fdcb8b50, 0x00007fa7fe5d0000)
+  to   space 34304K,   0% used [0x00007fa7fe5d0000, 0x00007fa7fe5d0000, 0x00007fa800750000)
+ concurrent mark-sweep generation total 1471812K, used 883085K [0x00007fa815190000, 0x00007fa86eee1000, 0x00007fafdc000000)
+ Metaspace       used 73177K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10298K, capacity 10813K, committed 10824K, reserved 1048576K
+}
+Event: 208.035 GC heap before
+{Heap before GC invocations=26 (full 9):
+ par new generation   total 309056K, used 299746K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K, 100% used [0x00007fa7eb800000, 0x00007fa7fc450000, 0x00007fa7fc450000)
+  from space 34304K,  72% used [0x00007fa7fc450000, 0x00007fa7fdcb8b50, 0x00007fa7fe5d0000)
+  to   space 34304K,   0% used [0x00007fa7fe5d0000, 0x00007fa7fe5d0000, 0x00007fa800750000)
+ concurrent mark-sweep generation total 1471812K, used 883085K [0x00007fa815190000, 0x00007fa86eee1000, 0x00007fafdc000000)
+ Metaspace       used 73178K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10298K, capacity 10813K, committed 10824K, reserved 1048576K
+Event: 208.083 GC heap after
+Heap after GC invocations=27 (full 9):
+ par new generation   total 309056K, used 22351K [0x00007fa7eb800000, 0x00007fa800750000, 0x00007fa815190000)
+  eden space 274752K,   0% used [0x00007fa7eb800000, 0x00007fa7eb800000, 0x00007fa7fc450000)
+  from space 34304K,  65% used [0x00007fa7fe5d0000, 0x00007fa7ffba3c60, 0x00007fa800750000)
+  to   space 34304K,   0% used [0x00007fa7fc450000, 0x00007fa7fc450000, 0x00007fa7fe5d0000)
+ concurrent mark-sweep generation total 1471812K, used 895620K [0x00007fa815190000, 0x00007fa86eee1000, 0x00007fafdc000000)
+ Metaspace       used 73178K, capacity 74620K, committed 74904K, reserved 1114112K
+  class space    used 10298K, capacity 10813K, committed 10824K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 171.159 Thread 0x00007fa6b4005000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fb00509c9f8 method=java.util.concurrent.ForkJoinPool.helpStealer(Ljava/util/concurrent/ForkJoinPool$WorkQueue;Ljava/util/concurrent/ForkJoinTask;)V @ 149
+Event: 206.242 Thread 0x00007fa6b0007000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fb004f4ada8 method=java.util.concurrent.ConcurrentHashMap.transfer([Ljava/util/concurrent/ConcurrentHashMap$Node;[Ljava/util/concurrent/ConcurrentHashMap$Node;)V @ 351
+Event: 216.671 Thread 0x0000000003e7b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fb0051f2dc4 method=jogamp.common.util.locks.RecursiveLockImpl01Unfairish.validateLocked()V @ 14
+Event: 216.671 Thread 0x0000000003e7b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fb0051f2dc4 method=jogamp.common.util.locks.RecursiveLockImpl01Unfairish.validateLocked()V @ 14
+Event: 216.733 Thread 0x0000000003e7b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fb0051f2dc4 method=jogamp.common.util.locks.RecursiveLockImpl01Unfairish.validateLocked()V @ 14
+Event: 216.733 Thread 0x0000000003e7b000 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007fb0051f2dc4 method=jogamp.common.util.locks.RecursiveLockImpl01Unfairish.validateLocked()V @ 14
+Event: 216.746 Thread 0x0000000003e7b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fb004f9ea60 method=com.jogamp.common.util.IntIntHashMap.put(II)I @ 21
+Event: 216.746 Thread 0x0000000003e7b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fb004fa6cec method=com.jogamp.common.util.IntIntHashMap.put(II)I @ 21
+Event: 216.784 Thread 0x0000000003e7b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fb004fd0c78 method=com.jogamp.common.util.IntIntHashMap.put(II)I @ 21
+Event: 216.808 Thread 0x0000000003e7b000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007fb005011cc8 method=jogamp.opengl.gl4.GL4bcImpl.checkBufferObject(ZZZILjava/lang/String;Z)Z @ 65
+
+Internal exceptions (10 events):
+Event: 129.068 Thread 0x00000000037e2800 Exception <a 'java/security/PrivilegedActionException'> (0x00007fa7f6af8618) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 129.068 Thread 0x00000000037e2800 Exception <a 'java/security/PrivilegedActionException'> (0x00007fa7f6af8a10) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jvm.cpp, line 1386]
+Event: 156.560 Thread 0x0000000003e7b000 Exception <a 'java/lang/UnsupportedOperationException': > (0x00007fa7ecffa388) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 159.736 Thread 0x0000000003e7b000 Exception <a 'java/lang/UnsupportedOperationException': > (0x00007fa7ed311648) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 162.457 Thread 0x0000000003e7b000 Exception <a 'java/lang/UnsupportedOperationException': > (0x00007fa7ed6c5698) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotspot/src/share/vm/prims/jni.cpp, line 735]
+Event: 166.600 Thread 0x0000000003e7b000 Implicit null exception at 0x00007fb004daec74 to 0x00007fb004daedfe
+Event: 168.589 Thread 0x0000000003e7b000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$comparingInt$7b0bb60$1(Ljava/util/function/ToIntFunction;Ljava/lang/Object;Ljava/lang/Object;)I> (0x00007fa7fa497e88) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u66/4988/hotsp
+Event: 216.746 Thread 0x0000000003e7b000 Implicit null exception at 0x00007fb004f9e9ba to 0x00007fb004f9ea3d
+Event: 216.746 Thread 0x0000000003e7b000 Implicit null exception at 0x00007fb004fa6c21 to 0x00007fb004fa6cc1
+Event: 216.784 Thread 0x0000000003e7b000 Implicit null exception at 0x00007fb004fd0b53 to 0x00007fb004fd0c51
+
+Events (10 events):
+Event: 216.784 Thread 0x0000000003e7b000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x00007fb004fd0c78
+Event: 216.784 Thread 0x0000000003e7b000 DEOPT PACKING pc=0x00007fb004fd0c78 sp=0x00007fa746b4e520
+Event: 216.784 Thread 0x0000000003e7b000 DEOPT UNPACKING pc=0x00007fb0039e4229 sp=0x00007fa746b4e3b8 mode 2
+Event: 216.785 loading class org/scijava/ui/swing/console/ConsolePanel$1
+Event: 216.785 loading class org/scijava/ui/swing/console/ConsolePanel$1 done
+Event: 216.786 loading class org/scijava/ui/swing/console/SwingConsolePane$1
+Event: 216.786 loading class org/scijava/ui/swing/console/SwingConsolePane$1 done
+Event: 216.808 Thread 0x0000000003e7b000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x00007fb005011cc8
+Event: 216.808 Thread 0x0000000003e7b000 DEOPT PACKING pc=0x00007fb005011cc8 sp=0x00007fa746b4e480
+Event: 216.808 Thread 0x0000000003e7b000 DEOPT UNPACKING pc=0x00007fb0039e4229 sp=0x00007fa746b4e340 mode 2
+
+
+Dynamic libraries:
+00400000-00411000 r-xp 00000000 103:00 104957037                         /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/ImageJ-linux64
+00611000-00612000 r--p 00011000 103:00 104957037                         /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/ImageJ-linux64
+00612000-00613000 rw-p 00012000 103:00 104957037                         /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/ImageJ-linux64
+00613000-00615000 rw-p 00000000 00:00 0 
+01d72000-04815000 rw-p 00000000 00:00 0                                  [heap]
+406eb000-40799000 rw-p 00000000 00:00 0 
+41b74000-41c22000 rw-p 00000000 00:00 0 
+41faa000-41fac000 r-xs 00000000 08:52 5507540                            /tmp/.gl4ZqarM (deleted)
+7fa67c000000-7fa67c021000 rw-p 00000000 00:00 0 
+7fa67c021000-7fa680000000 ---p 00000000 00:00 0 
+7fa680000000-7fa680021000 rw-p 00000000 00:00 0 
+7fa680021000-7fa684000000 ---p 00000000 00:00 0 
+7fa684000000-7fa684021000 rw-p 00000000 00:00 0 
+7fa684021000-7fa688000000 ---p 00000000 00:00 0 
+7fa688000000-7fa688021000 rw-p 00000000 00:00 0 
+7fa688021000-7fa68c000000 ---p 00000000 00:00 0 
+7fa68c000000-7fa68c021000 rw-p 00000000 00:00 0 
+7fa68c021000-7fa690000000 ---p 00000000 00:00 0 
+7fa690000000-7fa690021000 rw-p 00000000 00:00 0 
+7fa690021000-7fa694000000 ---p 00000000 00:00 0 
+7fa694000000-7fa694021000 rw-p 00000000 00:00 0 
+7fa694021000-7fa698000000 ---p 00000000 00:00 0 
+7fa698000000-7fa698021000 rw-p 00000000 00:00 0 
+7fa698021000-7fa69c000000 ---p 00000000 00:00 0 
+7fa69c000000-7fa69c021000 rw-p 00000000 00:00 0 
+7fa69c021000-7fa6a0000000 ---p 00000000 00:00 0 
+7fa6a0000000-7fa6a0021000 rw-p 00000000 00:00 0 
+7fa6a0021000-7fa6a4000000 ---p 00000000 00:00 0 
+7fa6a4000000-7fa6a4021000 rw-p 00000000 00:00 0 
+7fa6a4021000-7fa6a8000000 ---p 00000000 00:00 0 
+7fa6a8000000-7fa6a8021000 rw-p 00000000 00:00 0 
+7fa6a8021000-7fa6ac000000 ---p 00000000 00:00 0 
+7fa6ac000000-7fa6ac021000 rw-p 00000000 00:00 0 
+7fa6ac021000-7fa6b0000000 ---p 00000000 00:00 0 
+7fa6b0000000-7fa6b0021000 rw-p 00000000 00:00 0 
+7fa6b0021000-7fa6b4000000 ---p 00000000 00:00 0 
+7fa6b4000000-7fa6b4021000 rw-p 00000000 00:00 0 
+7fa6b4021000-7fa6b8000000 ---p 00000000 00:00 0 
+7fa6b9c3a000-7fa6b9c3d000 ---p 00000000 00:00 0 
+7fa6b9c3d000-7fa6b9d3b000 rw-p 00000000 00:00 0 
+7fa6b9d3b000-7fa6b9d3e000 ---p 00000000 00:00 0 
+7fa6b9d3e000-7fa6b9e3c000 rw-p 00000000 00:00 0 
+7fa6b9e3c000-7fa6b9e3f000 ---p 00000000 00:00 0 
+7fa6b9e3f000-7fa6b9f3d000 rw-p 00000000 00:00 0 
+7fa6b9f3d000-7fa6b9f40000 ---p 00000000 00:00 0 
+7fa6b9f40000-7fa6ba03e000 rw-p 00000000 00:00 0 
+7fa6ba03e000-7fa6ba041000 ---p 00000000 00:00 0 
+7fa6ba041000-7fa6ba13f000 rw-p 00000000 00:00 0 
+7fa6ba13f000-7fa6ba142000 ---p 00000000 00:00 0 
+7fa6ba142000-7fa6ba240000 rw-p 00000000 00:00 0 
+7fa6ba240000-7fa6ba27a000 r-xp 00000000 103:00 104957796                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjpeg.so
+7fa6ba27a000-7fa6ba47a000 ---p 0003a000 103:00 104957796                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjpeg.so
+7fa6ba47a000-7fa6ba47b000 rw-p 0003a000 103:00 104957796                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjpeg.so
+7fa6ba47b000-7fa6ba47e000 ---p 00000000 00:00 0 
+7fa6ba47e000-7fa6ba57c000 rw-p 00000000 00:00 0 
+7fa6ba57c000-7fa6ba57f000 ---p 00000000 00:00 0 
+7fa6ba57f000-7fa6ba67d000 rw-p 00000000 00:00 0 
+7fa6ba67d000-7fa6ba680000 ---p 00000000 00:00 0 
+7fa6ba680000-7fa6ba77e000 rw-p 00000000 00:00 0 
+7fa6ba77e000-7fa6baefe000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa6baefe000-7fa6baf01000 ---p 00000000 00:00 0 
+7fa6baf01000-7fa6bafff000 rw-p 00000000 00:00 0 
+7fa6bb77f000-7fa6bb782000 ---p 00000000 00:00 0 
+7fa6bb782000-7fa6bb880000 rw-p 00000000 00:00 0 
+7fa6bb880000-7fa6bc000000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa6bc000000-7fa6bc021000 rw-p 00000000 00:00 0 
+7fa6bc021000-7fa6c0000000 ---p 00000000 00:00 0 
+7fa6c0000000-7fa6c0021000 rw-p 00000000 00:00 0 
+7fa6c0021000-7fa6c4000000 ---p 00000000 00:00 0 
+7fa6c4000000-7fa6c4021000 rw-p 00000000 00:00 0 
+7fa6c4021000-7fa6c8000000 ---p 00000000 00:00 0 
+7fa6c8000000-7fa6c8027000 rw-p 00000000 00:00 0 
+7fa6c8027000-7fa6cc000000 ---p 00000000 00:00 0 
+7fa6cc000000-7fa6cc021000 rw-p 00000000 00:00 0 
+7fa6cc021000-7fa6d0000000 ---p 00000000 00:00 0 
+7fa6d00c3000-7fa6d00c6000 ---p 00000000 00:00 0 
+7fa6d00c6000-7fa6d01c4000 rw-p 00000000 00:00 0 
+7fa6d0944000-7fa6d10c4000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa6d1844000-7fa6d1c44000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa6d1d41000-7fa6d1d44000 ---p 00000000 00:00 0 
+7fa6d1d44000-7fa6d1e42000 rw-p 00000000 00:00 0 
+7fa6d1e42000-7fa6d1e45000 ---p 00000000 00:00 0 
+7fa6d1e45000-7fa6d1f43000 rw-p 00000000 00:00 0 
+7fa6d1f43000-7fa6d1f46000 ---p 00000000 00:00 0 
+7fa6d1f46000-7fa6d2044000 rw-p 00000000 00:00 0 
+7fa6d2044000-7fa6d2244000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa6d2244000-7fa6d2344000 rw-p 00000000 00:00 0 
+7fa6d2344000-7fa6d2444000 ---p 00000000 00:00 0 
+7fa6d2444000-7fa6d2844000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa6f8000000-7fa6f8021000 rw-p 00000000 00:00 0 
+7fa6f8021000-7fa6fc000000 ---p 00000000 00:00 0 
+7fa6fc000000-7fa6fc028000 rw-p 00000000 00:00 0 
+7fa6fc028000-7fa700000000 ---p 00000000 00:00 0 
+7fa700000000-7fa700021000 rw-p 00000000 00:00 0 
+7fa700021000-7fa704000000 ---p 00000000 00:00 0 
+7fa704000000-7fa704021000 rw-p 00000000 00:00 0 
+7fa704021000-7fa708000000 ---p 00000000 00:00 0 
+7fa708000000-7fa708021000 rw-p 00000000 00:00 0 
+7fa708021000-7fa70c000000 ---p 00000000 00:00 0 
+7fa70c010000-7fa70c013000 ---p 00000000 00:00 0 
+7fa70c013000-7fa70c111000 rw-p 00000000 00:00 0 
+7fa70c111000-7fa70c114000 ---p 00000000 00:00 0 
+7fa70c114000-7fa70c212000 rw-p 00000000 00:00 0 
+7fa70c212000-7fa70c412000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa70c412000-7fa70cb92000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa70d312000-7fa70d315000 ---p 00000000 00:00 0 
+7fa70d315000-7fa70d413000 rw-p 00000000 00:00 0 
+7fa70d413000-7fa70d416000 ---p 00000000 00:00 0 
+7fa70d416000-7fa70d514000 rw-p 00000000 00:00 0 
+7fa70d514000-7fa70dc94000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa70e414000-7fa70f5ae000 r-xp 00000000 08:52 2495362                    /usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.410.104
+7fa70f5ae000-7fa70f5cf000 rwxp 0119a000 08:52 2495362                    /usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.410.104
+7fa70f5cf000-7fa70face000 r-xp 011bb000 08:52 2495362                    /usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.410.104
+7fa70face000-7fa70fcce000 ---p 016ba000 08:52 2495362                    /usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.410.104
+7fa70fcce000-7fa70ffe9000 rw-p 016ba000 08:52 2495362                    /usr/lib/x86_64-linux-gnu/libnvidia-glcore.so.410.104
+7fa70ffe9000-7fa710000000 rw-p 00000000 00:00 0 
+7fa710000000-7fa710559000 rw-p 00000000 00:00 0 
+7fa710559000-7fa714000000 ---p 00000000 00:00 0 
+7fa71404a000-7fa71404d000 ---p 00000000 00:00 0 
+7fa71404d000-7fa71414b000 rw-p 00000000 00:00 0 
+7fa71414b000-7fa71414e000 ---p 00000000 00:00 0 
+7fa71414e000-7fa71424c000 rw-p 00000000 00:00 0 
+7fa71424c000-7fa71424f000 ---p 00000000 00:00 0 
+7fa71424f000-7fa71454d000 rw-p 00000000 00:00 0 
+7fa71464d000-7fa71466d000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa71466d000-7fa7146ad000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7146ad000-7fa7146cd000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7146cd000-7fa71470d000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa71472d000-7fa714733000 r-xp 00000000 08:52 5507541                    /tmp/nativedata4584395356855782462.so
+7fa714733000-7fa714932000 ---p 00006000 08:52 5507541                    /tmp/nativedata4584395356855782462.so
+7fa714932000-7fa714933000 rw-p 00005000 08:52 5507541                    /tmp/nativedata4584395356855782462.so
+7fa714933000-7fa714936000 ---p 00000000 00:00 0 
+7fa714936000-7fa714a34000 rw-p 00000000 00:00 0 
+7fa714a34000-7fa714a37000 ---p 00000000 00:00 0 
+7fa714a37000-7fa714b35000 rw-p 00000000 00:00 0 
+7fa714b35000-7fa714b38000 ---p 00000000 00:00 0 
+7fa714b38000-7fa714e36000 rw-p 00000000 00:00 0 
+7fa714e36000-7fa714e39000 ---p 00000000 00:00 0 
+7fa714e39000-7fa714f37000 rw-p 00000000 00:00 0 
+7fa714f37000-7fa714fb7000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa714fb7000-7fa715037000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa715037000-7fa7150b7000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7150b7000-7fa7151b7000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7151b7000-7fa7151f7000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7151f7000-7fa7152fc000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7152fc000-7fa7152ff000 r-xp 00000000 08:52 2500757                    /usr/lib/x86_64-linux-gnu/tls/libnvidia-tls.so.410.104
+7fa7152ff000-7fa7154ff000 ---p 00003000 08:52 2500757                    /usr/lib/x86_64-linux-gnu/tls/libnvidia-tls.so.410.104
+7fa7154ff000-7fa715500000 rw-p 00003000 08:52 2500757                    /usr/lib/x86_64-linux-gnu/tls/libnvidia-tls.so.410.104
+7fa715500000-7fa7155ca000 r-xp 00000000 08:52 2495219                    /usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.410.104
+7fa7155ca000-7fa7155ff000 rwxp 000ca000 08:52 2495219                    /usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.410.104
+7fa7155ff000-7fa715613000 r-xp 000ff000 08:52 2495219                    /usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.410.104
+7fa715613000-7fa715812000 ---p 00113000 08:52 2495219                    /usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.410.104
+7fa715812000-7fa715837000 rw-p 00112000 08:52 2495219                    /usr/lib/x86_64-linux-gnu/libGLX_nvidia.so.410.104
+7fa715837000-7fa71583f000 rw-p 00000000 00:00 0 
+7fa71583f000-7fa715841000 r-xp 00000000 08:52 2498627                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7fa715841000-7fa715a40000 ---p 00002000 08:52 2498627                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7fa715a40000-7fa715a41000 r--p 00001000 08:52 2498627                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7fa715a41000-7fa715a42000 rw-p 00002000 08:52 2498627                    /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7fa715a5d000-7fa715a9d000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa715a9d000-7fa715add000 rw-s 00000000 103:00 78389315                  /home/lblondel/#78389315 (deleted)
+7fa715add000-7fa715b5d000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa715b5d000-7fa715bdd000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa715bdd000-7fa715c5d000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa715c5d000-7fa715d5d000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa715d5d000-7fa71728f000 r-xp 00000000 08:52 2495336                    /usr/lib/x86_64-linux-gnu/libnvidia-eglcore.so.410.104
+7fa71728f000-7fa71748e000 ---p 01532000 08:52 2495336                    /usr/lib/x86_64-linux-gnu/libnvidia-eglcore.so.410.104
+7fa71748e000-7fa71777a000 rw-p 01531000 08:52 2495336                    /usr/lib/x86_64-linux-gnu/libnvidia-eglcore.so.410.104
+7fa71777a000-7fa71778d000 rw-p 00000000 00:00 0 
+7fa71778d000-7fa717892000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa717892000-7fa717899000 r-xp 00000000 08:52 2517889                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7fa717899000-7fa717a98000 ---p 00007000 08:52 2517889                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7fa717a98000-7fa717a99000 r--p 00006000 08:52 2517889                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7fa717a99000-7fa717a9a000 rw-p 00007000 08:52 2517889                    /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7fa717a9a000-7fa717b1a000 r-xp 00000000 08:52 2495982                    /usr/lib/x86_64-linux-gnu/libnvidia-glsi.so.410.104
+7fa717b1a000-7fa717d19000 ---p 00080000 08:52 2495982                    /usr/lib/x86_64-linux-gnu/libnvidia-glsi.so.410.104
+7fa717d19000-7fa717d27000 rw-p 0007f000 08:52 2495982                    /usr/lib/x86_64-linux-gnu/libnvidia-glsi.so.410.104
+7fa717d27000-7fa71c000000 rw-p 00000000 00:00 0 
+7fa71c000000-7fa71c75f000 rw-p 00000000 00:00 0 
+7fa71c75f000-7fa720000000 ---p 00000000 00:00 0 
+7fa72000c000-7fa72001f000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa72001f000-7fa72003f000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa72003f000-7fa720042000 ---p 00000000 00:00 0 
+7fa720042000-7fa720140000 rw-p 00000000 00:00 0 
+7fa720140000-7fa72016c000 r-xp 00000000 08:52 2498372                    /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7fa72016c000-7fa72036b000 ---p 0002c000 08:52 2498372                    /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7fa72036b000-7fa72036f000 r--p 0002b000 08:52 2498372                    /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7fa72036f000-7fa720370000 rw-p 0002f000 08:52 2498372                    /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7fa720370000-7fa720371000 rw-p 00000000 00:00 0 
+7fa720371000-7fa7203a0000 r-xp 00000000 08:52 8408234                    /lib/x86_64-linux-gnu/libexpat.so.1.6.7
+7fa7203a0000-7fa7205a0000 ---p 0002f000 08:52 8408234                    /lib/x86_64-linux-gnu/libexpat.so.1.6.7
+7fa7205a0000-7fa7205a2000 r--p 0002f000 08:52 8408234                    /lib/x86_64-linux-gnu/libexpat.so.1.6.7
+7fa7205a2000-7fa7205a3000 rw-p 00031000 08:52 8408234                    /lib/x86_64-linux-gnu/libexpat.so.1.6.7
+7fa7205a3000-7fa7205b4000 r-xp 00000000 08:52 2502323                    /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.1.0
+7fa7205b4000-7fa7207b3000 ---p 00011000 08:52 2502323                    /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.1.0
+7fa7207b3000-7fa7207b5000 r--p 00010000 08:52 2502323                    /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.1.0
+7fa7207b5000-7fa7207b6000 rw-p 00012000 08:52 2502323                    /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.1.0
+7fa7207b6000-7fa7207c2000 r-xp 00000000 08:52 2505002                    /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+7fa7207c2000-7fa7209c2000 ---p 0000c000 08:52 2505002                    /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+7fa7209c2000-7fa7209c3000 r--p 0000c000 08:52 2505002                    /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+7fa7209c3000-7fa7209c4000 rw-p 0000d000 08:52 2505002                    /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+7fa7209c4000-7fa7209d1000 r-xp 00000000 08:52 2502320                    /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.3.0
+7fa7209d1000-7fa720bd0000 ---p 0000d000 08:52 2502320                    /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.3.0
+7fa720bd0000-7fa720bd2000 r--p 0000c000 08:52 2502320                    /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.3.0
+7fa720bd2000-7fa720bd3000 rw-p 0000e000 08:52 2502320                    /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.3.0
+7fa720bd3000-7fa720bd4000 r-xp 00000000 08:52 2498214                    /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7fa720bd4000-7fa720dd3000 ---p 00001000 08:52 2498214                    /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7fa720dd3000-7fa720dd4000 r--p 00000000 08:52 2498214                    /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7fa720dd4000-7fa720dd5000 rw-p 00001000 08:52 2498214                    /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7fa720dd5000-7fa720dda000 r-xp 00000000 08:52 2498207                    /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+7fa720dda000-7fa720fda000 ---p 00005000 08:52 2498207                    /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+7fa720fda000-7fa720fdb000 r--p 00005000 08:52 2498207                    /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+7fa720fdb000-7fa720fdc000 rw-p 00006000 08:52 2498207                    /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+7fa720fdc000-7fa720fde000 r-xp 00000000 08:52 2493109                    /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+7fa720fde000-7fa7211dd000 ---p 00002000 08:52 2493109                    /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+7fa7211dd000-7fa7211de000 r--p 00001000 08:52 2493109                    /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+7fa7211de000-7fa7211df000 rw-p 00002000 08:52 2493109                    /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+7fa7211df000-7fa7211e6000 r-xp 00000000 08:52 2497729                    /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7fa7211e6000-7fa7213e5000 ---p 00007000 08:52 2497729                    /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7fa7213e5000-7fa7213e6000 r--p 00006000 08:52 2497729                    /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7fa7213e6000-7fa7213e7000 rw-p 00007000 08:52 2497729                    /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7fa7213e7000-7fa7213ea000 r-xp 00000000 08:52 2492058                    /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.0.0
+7fa7213ea000-7fa7215e9000 ---p 00003000 08:52 2492058                    /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.0.0
+7fa7215e9000-7fa7215ea000 r--p 00002000 08:52 2492058                    /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.0.0
+7fa7215ea000-7fa7215eb000 rw-p 00003000 08:52 2492058                    /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.0.0
+7fa7215eb000-7fa7215ec000 r-xp 00000000 08:52 2491614                    /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7fa7215ec000-7fa7217eb000 ---p 00001000 08:52 2491614                    /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7fa7217eb000-7fa7217ec000 r--p 00000000 08:52 2491614                    /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7fa7217ec000-7fa7217ed000 rw-p 00001000 08:52 2491614                    /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7fa7217ed000-7fa7217f1000 r-xp 00000000 08:52 2493106                    /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+7fa7217f1000-7fa7219f0000 ---p 00004000 08:52 2493106                    /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+7fa7219f0000-7fa7219f1000 r--p 00003000 08:52 2493106                    /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+7fa7219f1000-7fa7219f2000 rw-p 00004000 08:52 2493106                    /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+7fa7219f2000-7fa721a2a000 r-xp 00000000 08:52 2498379                    /usr/lib/x86_64-linux-gnu/libEGL_mesa.so.0.0.0
+7fa721a2a000-7fa721c2a000 ---p 00038000 08:52 2498379                    /usr/lib/x86_64-linux-gnu/libEGL_mesa.so.0.0.0
+7fa721c2a000-7fa721c2c000 r--p 00038000 08:52 2498379                    /usr/lib/x86_64-linux-gnu/libEGL_mesa.so.0.0.0
+7fa721c2c000-7fa721c2d000 rw-p 0003a000 08:52 2498379                    /usr/lib/x86_64-linux-gnu/libEGL_mesa.so.0.0.0
+7fa721c2d000-7fa721c3d000 r-xp 00000000 08:52 2491062                    /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7fa721c3d000-7fa721e3c000 ---p 00010000 08:52 2491062                    /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7fa721e3c000-7fa721e3d000 r--p 0000f000 08:52 2491062                    /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7fa721e3d000-7fa721e3e000 rw-p 00010000 08:52 2491062                    /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7fa721e3e000-7fa721f09000 r-xp 00000000 08:52 2493671                    /usr/lib/x86_64-linux-gnu/libEGL_nvidia.so.410.104
+7fa721f09000-7fa722108000 ---p 000cb000 08:52 2493671                    /usr/lib/x86_64-linux-gnu/libEGL_nvidia.so.410.104
+7fa722108000-7fa72213a000 rw-p 000ca000 08:52 2493671                    /usr/lib/x86_64-linux-gnu/libEGL_nvidia.so.410.104
+7fa72213a000-7fa72213f000 rw-p 00000000 00:00 0 
+7fa72213f000-7fa72219b000 r-xp 00000000 08:52 5767329                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libjogl_mobile.so
+7fa72219b000-7fa72239b000 ---p 0005c000 08:52 5767329                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libjogl_mobile.so
+7fa72239b000-7fa72239c000 rw-p 0005c000 08:52 5767329                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libjogl_mobile.so
+7fa72239c000-7fa7223ae000 r-xp 00000000 08:52 2514937                    /usr/lib/x86_64-linux-gnu/libEGL.so.1.0.0
+7fa7223ae000-7fa7225ae000 ---p 00012000 08:52 2514937                    /usr/lib/x86_64-linux-gnu/libEGL.so.1.0.0
+7fa7225ae000-7fa7225af000 r--p 00012000 08:52 2514937                    /usr/lib/x86_64-linux-gnu/libEGL.so.1.0.0
+7fa7225af000-7fa7225b0000 rw-p 00013000 08:52 2514937                    /usr/lib/x86_64-linux-gnu/libEGL.so.1.0.0
+7fa7225b0000-7fa7225b9000 r-xp 00000000 08:52 2497898                    /usr/lib/x86_64-linux-gnu/libGLESv2.so.2.0.0
+7fa7225b9000-7fa7225bc000 r-xp 00009000 08:52 2497898                    /usr/lib/x86_64-linux-gnu/libGLESv2.so.2.0.0
+7fa7225bc000-7fa7225bf000 r-xp 0000c000 08:52 2497898                    /usr/lib/x86_64-linux-gnu/libGLESv2.so.2.0.0
+7fa7225bf000-7fa7227be000 ---p 0000f000 08:52 2497898                    /usr/lib/x86_64-linux-gnu/libGLESv2.so.2.0.0
+7fa7227be000-7fa7227c1000 r--p 0000e000 08:52 2497898                    /usr/lib/x86_64-linux-gnu/libGLESv2.so.2.0.0
+7fa7227c1000-7fa7227c2000 rw-p 00011000 08:52 2497898                    /usr/lib/x86_64-linux-gnu/libGLESv2.so.2.0.0
+7fa7227c2000-7fa72287a000 r-xp 00000000 08:52 5767325                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libjogl_desktop.so
+7fa72287a000-7fa722a7a000 ---p 000b8000 08:52 5767325                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libjogl_desktop.so
+7fa722a7a000-7fa722a7b000 rw-p 000b8000 08:52 5767325                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libjogl_desktop.so
+7fa722a7b000-7fa722abd000 r-xp 00000000 08:52 2490614                    /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0
+7fa722abd000-7fa722ad6000 r-xp 00042000 08:52 2490614                    /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0
+7fa722ad6000-7fa722ae9000 r-xp 0005b000 08:52 2490614                    /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0
+7fa722ae9000-7fa722ce8000 ---p 0006e000 08:52 2490614                    /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0
+7fa722ce8000-7fa722d10000 r--p 0006d000 08:52 2490614                    /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0
+7fa722d10000-7fa722d11000 rw-p 00095000 08:52 2490614                    /usr/lib/x86_64-linux-gnu/libGLdispatch.so.0.0.0
+7fa722d11000-7fa722d31000 rw-p 00000000 00:00 0 
+7fa722d31000-7fa722d41000 r-xp 00000000 08:52 2498390                    /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0
+7fa722d41000-7fa722f40000 ---p 00010000 08:52 2498390                    /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0
+7fa722f40000-7fa722f41000 r--p 0000f000 08:52 2498390                    /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0
+7fa722f41000-7fa722f42000 rw-p 00010000 08:52 2498390                    /usr/lib/x86_64-linux-gnu/libGLX.so.0.0.0
+7fa722f42000-7fa722f62000 rw-p 00000000 00:00 0 
+7fa722f62000-7fa722fa6000 r-xp 00000000 08:52 2498397                    /usr/lib/x86_64-linux-gnu/libGL.so.1.0.0
+7fa722fa6000-7fa722fbf000 r-xp 00044000 08:52 2498397                    /usr/lib/x86_64-linux-gnu/libGL.so.1.0.0
+7fa722fbf000-7fa722fd3000 r-xp 0005d000 08:52 2498397                    /usr/lib/x86_64-linux-gnu/libGL.so.1.0.0
+7fa722fd3000-7fa7231d2000 ---p 00071000 08:52 2498397                    /usr/lib/x86_64-linux-gnu/libGL.so.1.0.0
+7fa7231d2000-7fa7231ec000 r--p 00070000 08:52 2498397                    /usr/lib/x86_64-linux-gnu/libGL.so.1.0.0
+7fa7231ec000-7fa7231ed000 rw-p 0008a000 08:52 2498397                    /usr/lib/x86_64-linux-gnu/libGL.so.1.0.0
+7fa7231ed000-7fa7233ee000 rw-p 00000000 00:00 0 
+7fa7233ee000-7fa7235ee000 rw-p 00000000 00:00 0 
+7fa7235ee000-7fa7235f5000 r-xp 00000000 08:52 5767333                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libnativewindow_x11.so
+7fa7235f5000-7fa7237f4000 ---p 00007000 08:52 5767333                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libnativewindow_x11.so
+7fa7237f4000-7fa7237f5000 rw-p 00006000 08:52 5767333                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libnativewindow_x11.so
+7fa7237f5000-7fa7237fa000 r-xp 00000000 08:52 2493118                    /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7fa7237fa000-7fa7239f9000 ---p 00005000 08:52 2493118                    /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7fa7239f9000-7fa7239fa000 r--p 00004000 08:52 2493118                    /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7fa7239fa000-7fa7239fb000 rw-p 00005000 08:52 2493118                    /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7fa7239fb000-7fa7239fd000 r-xp 00000000 08:52 5767331                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libnativewindow_awt.so
+7fa7239fd000-7fa723bfc000 ---p 00002000 08:52 5767331                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libnativewindow_awt.so
+7fa723bfc000-7fa723bfd000 rw-p 00001000 08:52 5767331                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libnativewindow_awt.so
+7fa723bfd000-7fa723bfe000 r-xp 00000000 103:00 104957786                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjawt.so
+7fa723bfe000-7fa723dfd000 ---p 00001000 103:00 104957786                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjawt.so
+7fa723dfd000-7fa723dfe000 rw-p 00000000 103:00 104957786                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjawt.so
+7fa723dfe000-7fa723e00000 r-xp 00000000 08:52 5767280                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libgluegen-rt.so
+7fa723e00000-7fa723fff000 ---p 00002000 08:52 5767280                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libgluegen-rt.so
+7fa723fff000-7fa724000000 rw-p 00001000 08:52 5767280                    /tmp/jogamp_0000/file_cache/jln1686102052869480690/jln7925279550558714699/natives/linux-amd64/libgluegen-rt.so
+7fa724000000-7fa724023000 rw-p 00000000 00:00 0 
+7fa724023000-7fa728000000 ---p 00000000 00:00 0 
+7fa728000000-7fa728021000 rw-p 00000000 00:00 0 
+7fa728021000-7fa72c000000 ---p 00000000 00:00 0 
+7fa72c000000-7fa730000000 rw-p 00000000 00:00 0 
+7fa730000000-7fa730caa000 rw-p 00000000 00:00 0 
+7fa730caa000-7fa734000000 ---p 00000000 00:00 0 
+7fa734000000-7fa734031000 rw-p 00000000 00:00 0 
+7fa734031000-7fa738000000 ---p 00000000 00:00 0 
+7fa738000000-7fa738021000 rw-p 00000000 00:00 0 
+7fa738021000-7fa73c000000 ---p 00000000 00:00 0 
+7fa73c000000-7fa73c021000 rw-p 00000000 00:00 0 
+7fa73c021000-7fa740000000 ---p 00000000 00:00 0 
+7fa740000000-7fa7414e2000 rw-p 00000000 00:00 0 
+7fa7414e2000-7fa744000000 ---p 00000000 00:00 0 
+7fa744009000-7fa744029000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa744029000-7fa744069000 r-xs 00000000 103:00 78389315                  /home/lblondel/#78389315 (deleted)
+7fa744069000-7fa74406c000 ---p 00000000 00:00 0 
+7fa74406c000-7fa74436a000 rw-p 00000000 00:00 0 
+7fa74436a000-7fa744386000 r-xp 00000000 08:52 8389770                    /lib/x86_64-linux-gnu/libz.so.1.2.11
+7fa744386000-7fa744585000 ---p 0001c000 08:52 8389770                    /lib/x86_64-linux-gnu/libz.so.1.2.11
+7fa744585000-7fa744586000 r--p 0001b000 08:52 8389770                    /lib/x86_64-linux-gnu/libz.so.1.2.11
+7fa744586000-7fa744587000 rw-p 0001c000 08:52 8389770                    /lib/x86_64-linux-gnu/libz.so.1.2.11
+7fa744587000-7fa74486d000 r-xp 00000000 08:52 5506289                    /tmp/jhdf51886001238989755960.so
+7fa74486d000-7fa744a6d000 ---p 002e6000 08:52 5506289                    /tmp/jhdf51886001238989755960.so
+7fa744a6d000-7fa744a76000 rw-p 002e6000 08:52 5506289                    /tmp/jhdf51886001238989755960.so
+7fa744a76000-7fa744c71000 rw-p 00000000 00:00 0 
+7fa744c71000-7fa744c78000 ---p 00000000 00:00 0 
+7fa744c78000-7fa744e78000 rw-p 00000000 00:00 0 
+7fa744e78000-7fa744e7b000 ---p 00000000 00:00 0 
+7fa744e7b000-7fa745179000 rw-p 00000000 00:00 0 
+7fa745179000-7fa745379000 rw-p 00000000 00:00 0 
+7fa745379000-7fa7453a3000 r-xp 00000000 103:00 104957759                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libdcpr.so
+7fa7453a3000-7fa7455a3000 ---p 0002a000 103:00 104957759                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libdcpr.so
+7fa7455a3000-7fa7455a6000 rw-p 0002a000 103:00 104957759                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libdcpr.so
+7fa7455a6000-7fa7457a6000 rw-p 00000000 00:00 0 
+7fa7457a6000-7fa7457a9000 ---p 00000000 00:00 0 
+7fa7457a9000-7fa745aa7000 rw-p 00000000 00:00 0 
+7fa745aa7000-7fa745ca0000 rw-p 00000000 00:00 0 
+7fa745ca0000-7fa745ca7000 ---p 00000000 00:00 0 
+7fa745ca7000-7fa745ea5000 rw-p 00000000 00:00 0 
+7fa745ea5000-7fa745ea7000 ---p 00000000 00:00 0 
+7fa745ea7000-7fa7460a7000 rw-p 00000000 00:00 0 
+7fa7460a7000-7fa746110000 r-xp 00000000 103:00 104957772                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libt2k.so
+7fa746110000-7fa746310000 ---p 00069000 103:00 104957772                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libt2k.so
+7fa746310000-7fa746317000 rw-p 00069000 103:00 104957772                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libt2k.so
+7fa746317000-7fa746327000 rw-p 00000000 00:00 0 
+7fa746327000-7fa746338000 r-xp 00000000 103:00 104957797                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libnio.so
+7fa746338000-7fa746537000 ---p 00011000 103:00 104957797                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libnio.so
+7fa746537000-7fa746538000 rw-p 00010000 103:00 104957797                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libnio.so
+7fa746538000-7fa74654e000 r-xp 00000000 103:00 104957799                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libnet.so
+7fa74654e000-7fa74674e000 ---p 00016000 103:00 104957799                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libnet.so
+7fa74674e000-7fa74674f000 rw-p 00016000 103:00 104957799                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libnet.so
+7fa74674f000-7fa746947000 rw-p 00000000 00:00 0 
+7fa746947000-7fa746952000 ---p 00000000 00:00 0 
+7fa746952000-7fa746a50000 rw-p 00000000 00:00 0 
+7fa746a50000-7fa746a53000 ---p 00000000 00:00 0 
+7fa746a53000-7fa746b51000 rw-p 00000000 00:00 0 
+7fa746b51000-7fa746b54000 ---p 00000000 00:00 0 
+7fa746b54000-7fa746c52000 rw-p 00000000 00:00 0 
+7fa746c52000-7fa746c55000 ---p 00000000 00:00 0 
+7fa746c55000-7fa746d53000 rw-p 00000000 00:00 0 
+7fa746d5a000-7fa746d6d000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa746d6d000-7fa746d8d000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa746d8d000-7fa746dcd000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa746dcd000-7fa746ded000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa746ded000-7fa746e2d000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa746e2d000-7fa74702d000 rw-p 00000000 00:00 0 
+7fa74702d000-7fa747044000 r-xp 00000000 08:52 8388701                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fa747044000-7fa747243000 ---p 00017000 08:52 8388701                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fa747243000-7fa747244000 r--p 00016000 08:52 8388701                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fa747244000-7fa747245000 rw-p 00017000 08:52 8388701                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7fa747245000-7fa7472aa000 r-xp 00000000 103:00 104957794                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libfontmanager.so
+7fa7472aa000-7fa7474aa000 ---p 00065000 103:00 104957794                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libfontmanager.so
+7fa7474aa000-7fa7474ae000 rw-p 00065000 103:00 104957794                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libfontmanager.so
+7fa7474ae000-7fa7476bc000 rw-p 00000000 00:00 0 
+7fa7476bc000-7fa7476bf000 ---p 00000000 00:00 0 
+7fa7476bf000-7fa7476ce000 r-xp 00000000 08:52 2491494                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7fa7476ce000-7fa7478cd000 ---p 0000f000 08:52 2491494                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7fa7478cd000-7fa7478ce000 r--p 0000e000 08:52 2491494                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7fa7478ce000-7fa7478cf000 rw-p 0000f000 08:52 2491494                    /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7fa7478cf000-7fa7478d4000 r-xp 00000000 08:52 2494450                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7fa7478d4000-7fa747ad3000 ---p 00005000 08:52 2494450                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7fa747ad3000-7fa747ad4000 r--p 00004000 08:52 2494450                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7fa747ad4000-7fa747ad5000 rw-p 00005000 08:52 2494450                    /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7fa747ad5000-7fa747b29000 r-xp 00000000 103:00 104957809                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libawt_xawt.so
+7fa747b29000-7fa747d29000 ---p 00054000 103:00 104957809                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libawt_xawt.so
+7fa747d29000-7fa747d2d000 rw-p 00054000 103:00 104957809                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libawt_xawt.so
+7fa747d2d000-7fa747d2e000 rw-p 00000000 00:00 0 
+7fa747d2e000-7fa747dd0000 r-xp 00000000 103:00 104957791                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libawt.so
+7fa747dd0000-7fa747fd0000 ---p 000a2000 103:00 104957791                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libawt.so
+7fa747fd0000-7fa747fdc000 rw-p 000a2000 103:00 104957791                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libawt.so
+7fa747fdc000-7fa748000000 rw-p 00000000 00:00 0 
+7fa748000000-7fa748021000 rw-p 00000000 00:00 0 
+7fa748021000-7fa74c000000 ---p 00000000 00:00 0 
+7fa74c000000-7fa74c03a000 rw-p 00000000 00:00 0 
+7fa74c03a000-7fa750000000 ---p 00000000 00:00 0 
+7fa750000000-7fa75084c000 rw-p 00000000 00:00 0 
+7fa75084c000-7fa754000000 ---p 00000000 00:00 0 
+7fa754000000-7fa754021000 rw-p 00000000 00:00 0 
+7fa754021000-7fa758000000 ---p 00000000 00:00 0 
+7fa758000000-7fa759aff000 rw-p 00000000 00:00 0 
+7fa759aff000-7fa75c000000 ---p 00000000 00:00 0 
+7fa75c000000-7fa75d171000 rw-p 00000000 00:00 0 
+7fa75d171000-7fa760000000 ---p 00000000 00:00 0 
+7fa760000000-7fa760021000 rw-p 00000000 00:00 0 
+7fa760021000-7fa764000000 ---p 00000000 00:00 0 
+7fa764000000-7fa765909000 rw-p 00000000 00:00 0 
+7fa765909000-7fa768000000 ---p 00000000 00:00 0 
+7fa768000000-7fa768021000 rw-p 00000000 00:00 0 
+7fa768021000-7fa76c000000 ---p 00000000 00:00 0 
+7fa76c000000-7fa76c021000 rw-p 00000000 00:00 0 
+7fa76c021000-7fa770000000 ---p 00000000 00:00 0 
+7fa770000000-7fa7700ec000 rw-p 00000000 00:00 0 
+7fa7700ec000-7fa774000000 ---p 00000000 00:00 0 
+7fa774000000-7fa774021000 rw-p 00000000 00:00 0 
+7fa774021000-7fa778000000 ---p 00000000 00:00 0 
+7fa778000000-7fa778a92000 rw-p 00000000 00:00 0 
+7fa778a92000-7fa7b8000000 ---p 00000000 00:00 0 
+7fa7b8000000-7fa7b8021000 rw-p 00000000 00:00 0 
+7fa7b8021000-7fa7bc000000 ---p 00000000 00:00 0 
+7fa7bc000000-7fa7bc021000 rw-p 00000000 00:00 0 
+7fa7bc021000-7fa7c0000000 ---p 00000000 00:00 0 
+7fa7c0005000-7fa7c0007000 rw-s 00000000 08:52 5507540                    /tmp/.gl4ZqarM (deleted)
+7fa7c0007000-7fa7c0008000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0008000-7fa7c000c000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0014000-7fa7c0027000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0027000-7fa7c0028000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0028000-7fa7c0029000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa7c0029000-7fa7c002a000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa7c002a000-7fa7c002b000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c002b000-7fa7c002c000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c002c000-7fa7c004c000 rw-s 00000000 103:00 78389112                  /home/lblondel/#78389112 (deleted)
+7fa7c004c000-7fa7c006c000 r-xs 00000000 103:00 78389112                  /home/lblondel/#78389112 (deleted)
+7fa7c006c000-7fa7c0088000 r--s 00393000 103:00 104957664                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/ext/cldrdata.jar
+7fa7c0088000-7fa7c00a3000 r--s 001d2000 103:00 104957660                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/ext/nashorn.jar
+7fa7c00a3000-7fa7c00a6000 ---p 00000000 00:00 0 
+7fa7c00a6000-7fa7c03a4000 rw-p 00000000 00:00 0 
+7fa7c03a4000-7fa7c05a4000 rw-p 00000000 00:00 0 
+7fa7c05a4000-7fa7c07a3000 rw-p 00000000 00:00 0 
+7fa7c07a3000-7fa7c07a4000 ---p 00000000 00:00 0 
+7fa7c07a4000-7fa7c09a3000 rw-p 00000000 00:00 0 
+7fa7c09a3000-7fa7c09a4000 ---p 00000000 00:00 0 
+7fa7c09a4000-7fa7c0ba3000 rw-p 00000000 00:00 0 
+7fa7c0ba3000-7fa7c0ba4000 ---p 00000000 00:00 0 
+7fa7c0ba4000-7fa7c0ba7000 ---p 00000000 00:00 0 
+7fa7c0ba7000-7fa7c0ca5000 rw-p 00000000 00:00 0 
+7fa7c0ca5000-7fa7c0ca6000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa7c0ca6000-7fa7c0ca7000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa7c0ca7000-7fa7c0ca8000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0ca8000-7fa7c0ca9000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0ca9000-7fa7c0caa000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0caa000-7fa7c0cae000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0cae000-7fa7c0caf000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa7c0caf000-7fa7c0cb0000 rw-s 00000000 00:06 681                        /dev/nvidia0
+7fa7c0cb0000-7fa7c0cb1000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fa7c0cb1000-7fa7c0cbb000 r--s 00116000 103:00 104957655                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/ext/localedata.jar
+7fa7c0cbb000-7fa7c0ccd000 r--s 00345000 103:00 104957639                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/resources.jar
+7fa7c0ccd000-7fa7c0ebf000 rw-p 00000000 00:00 0 
+7fa7c0ebf000-7fa7c0ecd000 ---p 00000000 00:00 0 
+7fa7c0ecd000-7fa7c10cd000 rw-p 00000000 00:00 0 
+7fa7c10cd000-7fa7c10d0000 ---p 00000000 00:00 0 
+7fa7c10d0000-7fa7c13ce000 rw-p 00000000 00:00 0 
+7fa7c13ce000-7fa7c15ce000 rw-p 00000000 00:00 0 
+7fa7c15ce000-7fa7c17ce000 rw-p 00000000 00:00 0 
+7fa7c17ce000-7fa7c17cf000 r--s 00004000 103:00 104957098                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Feature_Detection-2.0.2.jar
+7fa7c17cf000-7fa7c17d0000 r--s 00003000 103:00 104957123                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/M_I_P-2.0.1.jar
+7fa7c17d0000-7fa7c17d3000 r--s 0001e000 103:00 104958082                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/z_spacing-1.1.1.jar
+7fa7c17d3000-7fa7c17d4000 r--s 00013000 103:00 104957843                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Descriptor_based_registration-2.2.0.jar
+7fa7c17d4000-7fa7c17d6000 r--s 00062000 103:00 104957055                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Color_Inspector_3D-2.3.2.jar
+7fa7c17d6000-7fa7c17d7000 r--s 00005000 103:00 104957054                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Color_Histogram-2.0.7.jar
+7fa7c17d7000-7fa7c17d8000 r--s 00010000 103:00 104957048                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/BalloonSegmentation_-3.0.1.jar
+7fa7c17d8000-7fa7c17da000 r--s 00004000 103:00 104958080                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/TrakEM2_Archipelago-2.0.3.jar
+7fa7c17da000-7fa7c17db000 r--s 00007000 103:00 104957187                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/panorama_-3.0.2.jar
+7fa7c17db000-7fa7c17dc000 r--s 00008000 103:00 104958083                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/H5J_Loader_Plugin-1.0.7.jar
+7fa7c17dc000-7fa7c17dd000 r--s 00007000 103:00 104957190                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/registration_3d-2.0.1.jar
+7fa7c17dd000-7fa7c17de000 r--s 00001000 103:00 104957165                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Time_Stamper-2.1.0.jar
+7fa7c17de000-7fa7c17e0000 r--s 00006000 103:00 104957121                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/LocalThickness_-4.0.2.jar
+7fa7c17e0000-7fa7c17e3000 r--s 00033000 103:00 104958063                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Sholl_Analysis-4.0.0.jar
+7fa7c17e3000-7fa7c17e5000 r--s 00005000 103:00 104958058                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Directionality_-2.3.0.jar
+7fa7c17e5000-7fa7c17e7000 r--s 00002000 103:00 104957133                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/RATS_-2.0.2.jar
+7fa7c17e7000-7fa7c17e8000 r--s 00005000 103:00 104957039                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/3D_Objects_Counter-2.0.1.jar
+7fa7c17e8000-7fa7c17ed000 r--s 0004e000 103:00 104957118                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/LSM_Toolbox-4.1.2.jar
+7fa7c17ed000-7fa7c17f3000 r--s 00076000 103:00 104958069                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Trainable_Segmentation-3.2.32.jar
+7fa7c17f3000-7fa7c1808000 r--s 00141000 103:00 104958068                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/TrackMate_-4.0.0.jar
+7fa7c1808000-7fa7c180d000 r--s 000a8000 103:00 104957854                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/MaMuT_-0.28.3.jar
+7fa7c180d000-7fa7c180e000 r--s 00001000 103:00 104957115                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Kuwahara_Filter-2.0.1.jar
+7fa7c180e000-7fa7c180f000 r--s 00002000 103:00 104957167                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/TopoJ_-2.0.1.jar
+7fa7c180f000-7fa7c1811000 r--s 00028000 103:00 104957177                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/View5D_-1.3.2.jar
+7fa7c1811000-7fa7c1816000 r--s 00047000 103:00 104958084                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/bigwarp_fiji-3.1.2.jar
+7fa7c1816000-7fa7c1817000 r--s 00006000 103:00 104957045                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Archipelago_Plugins-0.5.4.jar
+7fa7c1817000-7fa7c181f000 r--s 00099000 103:00 104957848                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Big_Stitcher-0.3.3.jar
+7fa7c181f000-7fa7c1824000 r--s 00029000 103:00 104957099                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Fiji_Archipelago-2.0.1.jar
+7fa7c1824000-7fa7c1825000 r--s 00004000 103:00 104958055                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/blockmatching_-2.1.3.jar
+7fa7c1825000-7fa7c1827000 r--s 0000a000 103:00 104957162                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Sync_Win-1.7-fiji4.jar
+7fa7c1827000-7fa7c182a000 r--s 00049000 103:00 104957103                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/FlowJ_-1.29.3.jar
+7fa7c182a000-7fa7c182c000 r--s 00002000 103:00 104957038                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/3D_Blob_Segmentation-3.0.1.jar
+7fa7c182c000-7fa7c182e000 r--s 00004000 103:00 104957174                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Vaa3d_Reader-2.0.2.jar
+7fa7c182e000-7fa7c1831000 r--s 00012000 103:00 104957111                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Image_Expression_Parser-3.0.1.jar
+7fa7c1831000-7fa7c1832000 r--s 00001000 103:00 104957120                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Linear_Kuwahara-2.0.1.jar
+7fa7c1832000-7fa7c1834000 r--s 00007000 103:00 104957105                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Gray_Morphology-2.3.4.jar
+7fa7c1834000-7fa7c1835000 r--s 00009000 103:00 104957104                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Graph_Cut-1.0.2.jar
+7fa7c1835000-7fa7c1837000 r--s 00000000 103:00 104957113                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/IsoData_Classifier-2.0.1.jar
+7fa7c1837000-7fa7c1838000 r--s 00001000 103:00 104957050                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/CPU_Meter-2.0.1.jar
+7fa7c1838000-7fa7c183a000 r--s 00004000 103:00 104957060                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Dichromacy_-2.1.1.jar
+7fa7c183a000-7fa7c183b000 r--s 00004000 103:00 104958053                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Auto_Threshold-1.17.1.jar
+7fa7c183b000-7fa7c183c000 r--s 00001000 103:00 104957108                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/IJ_Robot-2.0.1.jar
+7fa7c183c000-7fa7c183d000 r--s 00000000 103:00 104957137                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Samples_-2.0.2.jar
+7fa7c183d000-7fa7c183f000 r--s 0001a000 103:00 104957156                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Siox_Segmentation-1.0.5.jar
+7fa7c183f000-7fa7c1842000 r--s 00057000 103:00 104958067                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Stitching_-3.1.6.jar
+7fa7c1842000-7fa7c1844000 r--s 00006000 103:00 104957176                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Video_Editing-2.0.1.jar
+7fa7c1844000-7fa7c1845000 r--s 00002000 103:00 104958081                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/trakem2_tps-1.1.4.jar
+7fa7c1845000-7fa7c1846000 r--s 00000000 103:00 104957844                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/SPIM_Registration-0.0.1.jar
+7fa7c1846000-7fa7c1848000 r--s 00008000 103:00 104958066                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Stack_Manipulation-2.1.1.jar
+7fa7c1848000-7fa7c1849000 r--s 0002f000 103:00 104958056                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/bUnwarpJ_-2.6.10.jar
+7fa7c1849000-7fa7c184b000 r--s 00000000 103:00 104957163                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Thread_Killer-2.0.1.jar
+7fa7c184b000-7fa7c184c000 r--s 0000f000 103:00 104957847                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/HDF5_Vibez.jar
+7fa7c184c000-7fa7c184d000 r--s 00001000 103:00 104957051                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Calculator_Plus-2.0.1.jar
+7fa7c184d000-7fa7c184f000 r--s 00005000 103:00 104957166                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/ToAST_-25.0.2.jar
+7fa7c184f000-7fa7c1850000 r--s 00002000 103:00 104958103                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Correct_3D_Drift-1.0.3.jar
+7fa7c1850000-7fa7c186f000 r--s 001e0000 103:00 104957850                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/multiview_reconstruction-0.3.3.jar
+7fa7c186f000-7fa7c1870000 r--s 00003000 103:00 104957130                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Multi_Kymograph-3.0.1.jar
+7fa7c1870000-7fa7c1873000 r--s 00023000 103:00 104958057                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Colocalisation_Analysis-3.0.5.jar
+7fa7c1873000-7fa7c1874000 r--s 00005000 103:00 104957101                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Fiji_Package_Maker-2.1.1.jar
+7fa7c1874000-7fa7c1876000 r--s 00006000 103:00 104957046                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Arrow_-2.0.2.jar
+7fa7c1876000-7fa7c1877000 r--s 00009000 103:00 104957135                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/SPIM_Opener-2.0.2.jar
+7fa7c1877000-7fa7c187a000 r--s 00028000 103:00 104958077                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/bigdataviewer_fiji-5.0.0.jar
+7fa7c187a000-7fa7c187b000 r--s 00002000 103:00 104957107                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Helmholtz_Analysis-2.0.2.jar
+7fa7c187b000-7fa7c187d000 r--s 00012000 103:00 104957164                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Time_Lapse-2.1.0.jar
+7fa7c187d000-7fa7c187e000 r--s 00007000 103:00 104957052                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Cell_Counter-2.2.2.jar
+7fa7c187e000-7fa7c1880000 r--s 0000f000 103:00 104958061                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Reconstruct_Reader-2.0.4.jar
+7fa7c1880000-7fa7c1882000 r--s 00003000 103:00 104957057                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/CorrectBleach_-2.0.2.jar
+7fa7c1882000-7fa7c1884000 r--s 00016000 103:00 104957112                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Interactive_3D_Surface_Plot-3.0.0.jar
+7fa7c1884000-7fa7c1885000 r--s 00005000 103:00 104958079                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/FS_Align_TrakEM2-2.0.3.jar
+7fa7c1885000-7fa7c1888000 r--s 00027000 103:00 104957109                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/IO_-3.0.4.jar
+7fa7c1888000-7fa7c1889000 r--s 00007000 103:00 104957178                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Volume_Calculator-2.0.2.jar
+7fa7c1889000-7fa7c188b000 r--s 00002000 103:00 104958116                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Auto_Local_Threshold-1.10.0.jar
+7fa7c188b000-7fa7c188c000 r--s 00001000 103:00 104957160                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Statistical_Region_Merging-2.0.1.jar
+7fa7c188c000-7fa7c188e000 r--s 0000d000 103:00 104957132                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/QuickPALM_-1.1.2.jar
+7fa7c188e000-7fa7c188f000 r--s 00001000 103:00 104957175                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Vaa3d_Writer-1.0.2.jar
+7fa7c188f000-7fa7c1890000 r--s 00005000 103:00 104957131                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/PIV_analyser-1.1.2.jar
+7fa7c1890000-7fa7c1893000 r--s 0003c000 103:00 104958054                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/bio-formats_plugins-6.0.1.jar
+7fa7c1893000-7fa7c1894000 r--s 00002000 103:00 104957122                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/MTrack2_-2.0.1.jar
+7fa7c1894000-7fa7c1895000 r--s 00008000 103:00 104957153                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Series_Labeler-2.0.1.jar
+7fa7c1895000-7fa7c1896000 r--s 0000a000 103:00 104957158                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/SplineDeformationGenerator_-2.0.2.jar
+7fa7c1896000-7fa7c1897000 r--s 00004000 103:00 104958100                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/KymographBuilder-2.1.1.jar
+7fa7c1897000-7fa7c1899000 r--s 0001c000 103:00 104957179                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Volume_Viewer-2.01.2.jar
+7fa7c1899000-7fa7c189b000 r--s 00005000 103:00 104957129                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Manual_Tracking-2.1.1.jar
+7fa7c189b000-7fa7c189d000 r--s 0000b000 103:00 104958052                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/AnalyzeSkeleton_-3.3.0.jar
+7fa7c189d000-7fa7c18a1000 r--s 00055000 103:00 104958064                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Simple_Neurite_Tracer-3.1.6.jar
+7fa7c18a1000-7fa7c18a4000 r--s 00020000 103:00 104958060                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/mpicbg_-1.2.0.jar
+7fa7c18a4000-7fa7c18bc000 r--s 0022f000 103:00 104958070                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/TrakEM2_-1.3.2.jar
+7fa7c18bc000-7fa7c18bd000 r--s 00003000 103:00 104957056                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Colour_Deconvolution-3.0.2.jar
+7fa7c18bd000-7fa7c18bf000 r--s 0000a000 103:00 104958059                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Fiji_Developer-2.0.7.jar
+7fa7c18bf000-7fa7c18c1000 r--s 0001e000 103:00 104957110                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Image_5D-2.0.2.jar
+7fa7c18c1000-7fa7c18c2000 r--s 00005000 103:00 104957049                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Bug_Submitter-2.1.1.jar
+7fa7c18c2000-7fa7c18c4000 r--s 00013000 103:00 104957185                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/level_sets-1.0.2.jar
+7fa7c18c4000-7fa7c18c6000 r--s 00016000 103:00 104957102                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Fiji_Plugins-3.1.1.jar
+7fa7c18c6000-7fa7c18c8000 r--s 00005000 103:00 104957119                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Lasso_and_Blow_Tool-2.0.2.jar
+7fa7c18c8000-7fa7c18ce000 r--s 00069000 103:00 104957173                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/VIB_-3.0.2.jar
+7fa7c18ce000-7fa7c18d5000 r--s 00084000 103:00 104957040                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/3D_Viewer-4.0.2.jar
+7fa7c18d5000-7fa7c18d6000 r--s 00002000 103:00 104957157                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Skeletonize3D_-2.1.1.jar
+7fa7c18d6000-7fa7c18d8000 r--s 00009000 103:00 104958062                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/register_virtual_stack_slices-3.0.5.jar
+7fa7c18d8000-7fa7c18d9000 r--s 00002000 103:00 104957044                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/Anisotropic_Diffusion_2D-2.0.1.jar
+7fa7c18d9000-7fa7c18da000 r--s 00004000 103:00 104957117                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/plugins/LSM_Reader-4.1.2.jar
+7fa7c18da000-7fa7c18dc000 r--s 0001f000 103:00 104958132                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jheaps-0.9.jar
+7fa7c18dc000-7fa7c18de000 r--s 00010000 103:00 104957882                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mastodon-tomancak-0.1.0.jar
+7fa7c18de000-7fa7c18e5000 r--s 000cd000 103:00 104957853                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bigvolumeviewer-0.1.4.jar
+7fa7c18e5000-7fa7c18e6000 r--s 00036000 103:00 104957365                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/linux64/jogl-all-2.3.2-natives-linux-amd64.jar
+7fa7c18e6000-7fa7c18e8000 r--s 00000000 103:00 104957362                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/linux64/gluegen-rt-2.3.2-natives-linux-amd64.jar
+7fa7c18e8000-7fa7c18e9000 r--s 0002e000 103:00 104957363                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/linux64/joal-2.3.2-natives-linux-amd64.jar
+7fa7c18e9000-7fa7c18ea000 r--s 00002000 103:00 104957364                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/linux64/jocl-2.3.2-natives-linux-amd64.jar
+7fa7c18ea000-7fa7c18ec000 r--s 008b4000 103:00 104957361                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/linux64/ffmpeg-2.6.1-0.11-linux-x86_64.jar
+7fa7c18ec000-7fa7c18ed000 r--s 00000000 103:00 104957345                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jogl-all-main-2.3.2.jar
+7fa7c18ed000-7fa7c18ef000 r--s 0000f000 103:00 104957339                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/joal-2.3.2.jar
+7fa7c18ef000-7fa7c18f1000 r--s 00006000 103:00 104958078                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scifio-hdf5-0.1.3.jar
+7fa7c18f1000-7fa7c18f3000 r--s 00004000 103:00 104958046                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scifio-bf-compat-3.0.0.jar
+7fa7c18f3000-7fa7c18f4000 r--s 00003000 103:00 104958050                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/weave_jy2java-2.1.1.jar
+7fa7c18f4000-7fa7c18f5000 r--s 0000a000 103:00 104957392                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/pal-optimization-2.0.1.jar
+7fa7c18f5000-7fa7c18fc000 r--s 00095000 103:00 104957197                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/VIB-lib-2.2.0.jar
+7fa7c18fc000-7fa7c18fe000 r--s 0000b000 103:00 104958085                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/fiji-2.0.0-pre-8.jar
+7fa7c18fe000-7fa7c1900000 r--s 00007000 103:00 104957877                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mastodon-ellipsoid-fitting-0.2.3.jar
+7fa7c1900000-7fa7c1905000 r--s 00032000 103:00 104958097                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-svggen-1.10.jar
+7fa7c1905000-7fa7c190d000 r--s 00048000 103:00 104958090                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-css-1.10.jar
+7fa7c190d000-7fa7c196e000 r--s 00873000 103:00 104958051                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/weka-dev-3.9.3.jar
+7fa7c196e000-7fa7c1976000 r--s 00060000 103:00 104958088                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-awt-util-1.10.jar
+7fa7c1976000-7fa7c1978000 r--s 00012000 103:00 104957390                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/opencsv-3.9.jar
+7fa7c1978000-7fa7c197d000 r--s 00038000 103:00 104957249                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-beanutils-1.9.3.jar
+7fa7c197d000-7fa7c197f000 r--s 00016000 103:00 104958125                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/groovy-templates-2.4.8.jar
+7fa7c197f000-7fa7c1984000 r--s 0003d000 103:00 104957381                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mtj-1.0.4.jar
+7fa7c1984000-7fa7c1986000 r--s 00001000 103:00 104958110                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-constants-1.10.jar
+7fa7c1986000-7fa7c1989000 r--s 00026000 103:00 104957851                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/antlr-runtime-3.5.2.jar
+7fa7c1989000-7fa7c198a000 r--s 00000000 103:00 104958043                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jgrapht-0.0.0-STUB.jar
+7fa7c198a000-7fa7c198b000 r--s 00000000 103:00 104957340                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/joal-main-2.3.2.jar
+7fa7c198b000-7fa7c198c000 r--s 00000000 103:00 104957272                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/gluegen-rt-main-2.3.2.jar
+7fa7c198c000-7fa7c1990000 r--s 0002e000 103:00 104958101                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/script-editor-0.5.1.jar
+7fa7c1990000-7fa7c1992000 r--s 0000e000 103:00 104957316                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jcommander-1.48.jar
+7fa7c1992000-7fa7c1998000 r--s 00041000 103:00 104957367                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/logback-classic-1.2.3.jar
+7fa7c1998000-7fa7c199a000 r--s 00004000 103:00 104958115                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/OMEVisual-1.1.2.jar
+7fa7c199a000-7fa7c199b000 r--s 00004000 103:00 104958047                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scifio-lifesci-0.8.0.jar
+7fa7c199b000-7fa7c199d000 r--s 00149000 103:00 104957195                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/T2-NIT-1.1.2.jar
+7fa7c199d000-7fa7c19a1000 r--s 0003c000 103:00 104957310                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jai-codec-1.1.3.jar
+7fa7c19a1000-7fa7c19a2000 r--s 00001000 103:00 104957196                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/T2-TreelineGraph-1.1.2.jar
+7fa7c19a2000-7fa7c19a7000 r--s 00031000 103:00 104957341                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jocl-2.3.2.jar
+7fa7c19a7000-7fa7c19a9000 r--s 00000000 103:00 104957420                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-plugins-text-plain-0.1.3.jar
+7fa7c19a9000-7fa7c19ab000 r--s 00000000 103:00 104957419                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-plugins-text-markdown-0.1.3.jar
+7fa7c19ab000-7fa7c19ac000 r--s 00002000 103:00 104957293                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-ui-awt-0.3.1.jar
+7fa7c19ac000-7fa7c19b2000 r--s 0003a000 103:00 104957862                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-ui-swing-0.22.0.jar
+7fa7c19b2000-7fa7c19c3000 r--s 0008c000 103:00 104958012                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/joda-time-2.10.1.jar
+7fa7c19c3000-7fa7c19c5000 r--s 0000b000 103:00 104957289                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-plugins-tools-0.3.1.jar
+7fa7c19c5000-7fa7c19f4000 r--s 001a5000 103:00 104957861                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-ops-0.43.1.jar
+7fa7c19f4000-7fa7c19f5000 r--s 00003000 103:00 104958107                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-notebook-0.3.0.jar
+7fa7c19f5000-7fa7c19ff000 r--s 00066000 103:00 104957860                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-common-0.28.0.jar
+7fa7c19ff000-7fa7c1a00000 r--s 00002000 103:00 104958003                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-2.0.0-rc-69.jar
+7fa7c1a00000-7fa7c1a01000 r--s 00001000 103:00 104957416                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-config-2.0.2.jar
+7fa7c1a01000-7fa7c1a07000 r--s 00081000 103:00 104957396                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/postgresql-9.1-901-1.jdbc4.jar
+7fa7c1a07000-7fa7c1a0c000 r--s 00010000 103:00 104957451                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/xml-apis-ext-1.3.04.jar
+7fa7c1a0c000-7fa7c1a15000 r--s 00229000 103:00 104957857                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ij-1.52n.jar
+7fa7c1a15000-7fa7c1a4d000 r--s 004d0000 103:00 104957405                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scala-library-2.12.1.jar
+7fa7c1a4d000-7fa7c1a4e000 r--s 00001000 103:00 104957433                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-scala-0.2.1.jar
+7fa7c1a4e000-7fa7c1a51000 r--s 00014000 103:00 104957273                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/grDevices-0.8.1906.jar
+7fa7c1a51000-7fa7c1a5d000 r--s 0013b000 103:00 104957375                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/methods-0.8.1906.jar
+7fa7c1a5d000-7fa7c1a62000 r--s 00036000 103:00 104957252                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-compress-1.4.1.jar
+7fa7c1a62000-7fa7c1a64000 r--s 00005000 103:00 104957397                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/regexp-1.3.jar
+7fa7c1a64000-7fa7c1a66000 r--s 00008000 103:00 104957372                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/maven-scm-provider-svn-commons-1.4.jar
+7fa7c1a66000-7fa7c1a6a000 r--s 00014000 103:00 104957371                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/maven-scm-api-1.4.jar
+7fa7c1a6a000-7fa7c1a73000 r--s 0005d000 103:00 104957259                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-vfs2-2.0.jar
+7fa7c1a73000-7fa7c1a81000 r--s 000dd000 103:00 104957359                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/lapack-0.8.jar
+7fa7c1a81000-7fa7c1a82000 r--s 00093000 103:00 104957385                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/netlib-java-0.9.3-renjin-patched-2.jar
+7fa7c1a82000-7fa7c1a84000 r--s 00004000 103:00 104957269                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/gcc-runtime-0.8.1906.jar
+7fa7c1a84000-7fa7c1a86000 r--s 00003000 103:00 104957401                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/renjin-script-engine-0.8.1906.jar
+7fa7c1a86000-7fa7c1a87000 r--s 00001000 103:00 104957432                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-renjin-0.2.2.jar
+7fa7c1a87000-7fa7c1a8a000 r--s 0002c000 103:00 104957455                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/yecht-1.0.jar
+7fa7c1a8a000-7fa7c1a9a000 r--s 0008e000 103:00 104957334                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jnr-ffi-1.0.7.jar
+7fa7c1a9a000-7fa7c1a9f000 r--s 0005a000 103:00 104957243                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bsh-2.0b6.jar
+7fa7c1a9f000-7fa7c1aa0000 r--s 00002000 103:00 104957425                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-beanshell-0.3.3.jar
+7fa7c1aa0000-7fa7c1aa2000 r--s 00007000 103:00 104958031                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-scripting-0.8.2.jar
+7fa7c1aa2000-7fa7c1aa8000 r--s 0004b000 103:00 104957317                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jcommon-1.0.24.jar
+7fa7c1aa8000-7fa7c1aaf000 r--s 0004b000 103:00 104957250                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-codec-1.11.jar
+7fa7c1aaf000-7fa7c1ab1000 r--s 0000d000 103:00 104958109                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/trakem2-transform-1.0.1.jar
+7fa7c1ab1000-7fa7c1ab4000 r--s 0001d000 103:00 104958098                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-util-1.10.jar
+7fa7c1ab4000-7fa7c1ab5000 r--s 00004000 103:00 104957999                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/native-lib-loader-2.3.2.jar
+7fa7c1ab5000-7fa7c1ca8000 r--s 025ab000 103:00 104958030                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jython-shaded-2.7.1.jar
+7fa7c1ca8000-7fa7c1ca9000 r--s 00001000 103:00 104958007                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-jython-0.4.2.jar
+7fa7c1ca9000-7fa7c1cab000 r--s 0001a000 103:00 104958048                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scifio-ome-xml-0.15.0.jar
+7fa7c1cab000-7fa7c1cad000 r--s 00011000 103:00 104958094                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-parser-1.10.jar
+7fa7c1cad000-7fa7c1cb7000 r--s 000b4000 103:00 104957856                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/javassist-3.24.0-GA.jar
+7fa7c1cb7000-7fa7c1cbb000 r--s 00021000 103:00 104957206                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/autocomplete-2.6.1.jar
+7fa7c1cbb000-7fa7c1cc7000 r--s 0010f000 103:00 104957403                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/rsyntaxtextarea-2.6.1.jar
+7fa7c1cc7000-7fa7c1cd2000 r--s 000f2000 103:00 104957997                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scifio-0.37.3.jar
+7fa7c1cd2000-7fa7c1cda000 r--s 00069000 103:00 104958004                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-legacy-0.35.0.jar
+7fa7c1cda000-7fa7c1cdb000 r--s 00007000 103:00 104957280                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/image4j-0.7.jar
+7fa7c1cdb000-7fa7c1cfd000 r--s 0033e000 103:00 104957406                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scala-reflect-2.12.1.jar
+7fa7c1cfd000-7fa7c1d2c000 r--s 002e2000 103:00 104957399                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/renjin-core-0.8.1906.jar
+7fa7c1d2c000-7fa7c1d2e000 r--s 00001000 103:00 104957418                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-plugins-platforms-0.3.1.jar
+7fa7c1d2e000-7fa7c1d3a000 r--s 00076000 103:00 104957248                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/collections-generic-4.01.jar
+7fa7c1d3a000-7fa7c1d3c000 r--s 0000e000 103:00 104957354                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jung-graph-impl-2.0.1.jar
+7fa7c1d3c000-7fa7c1d3e000 r--s 00013000 103:00 104957400                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/renjin-gnur-runtime-0.8.1906.jar
+7fa7c1d3e000-7fa7c1d89000 r--s 00910000 103:00 104957404                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scala-compiler-2.12.1.jar
+7fa7c1d89000-7fa7c1d8c000 r--s 0000f000 103:00 104957373                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/maven-scm-provider-svnexe-1.4.jar
+7fa7c1d8c000-7fa7c1d8e000 r--s 00004000 103:00 104957290                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-plugins-uploader-ssh-0.3.2.jar
+7fa7c1d8e000-7fa7c1d91000 r--s 0002c000 103:00 104958093                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-gvt-1.10.jar
+7fa7c1d91000-7fa7c1d97000 r--s 00042000 103:00 104957351                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jsoup-1.7.2.jar
+7fa7c1d97000-7fa7c1d9e000 r--s 0004d000 103:00 104957268                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/filters-2.0.235.jar
+7fa7c1d9e000-7fa7c1db9000 r--s 00139000 103:00 104957440                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/swingx-1.6.1.jar
+7fa7c1db9000-7fa7c1dbb000 r--s 0000c000 103:00 104957389                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/op-finder-0.1.3.jar
+7fa7c1dbb000-7fa7c1dc1000 r--s 00051000 103:00 104958005                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-plugins-commands-0.8.1.jar
+7fa7c1dc1000-7fa7c1dc4000 r--s 0001e000 103:00 104957274                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/graphics-0.8.1906.jar
+7fa7c1dc4000-7fa7c1dc8000 r--s 00038000 103:00 104957863                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-updater-0.9.3.jar
+7fa7c1dc8000-7fa7c1ddc000 r--s 001bd000 103:00 104957311                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jai-core-1.1.3.jar
+7fa7c1ddc000-7fa7c1dde000 r--s 00003000 103:00 104957291                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-plugins-uploader-webdav-0.2.2.jar
+7fa7c1dde000-7fa7c1de0000 r--s 0000c000 103:00 104958121                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jply-0.2.0.jar
+7fa7c1de0000-7fa7c1de1000 r--s 00003000 103:00 104958133                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-mesh-io-0.1.2.jar
+7fa7c1de1000-7fa7c1df0000 r--s 000f1000 103:00 104957309                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/j3dutils-1.6.0-scijava-2.jar
+7fa7c1df0000-7fa7c1df3000 r--s 00008000 103:00 104957353                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jung-api-2.0.1.jar
+7fa7c1df3000-7fa7c1e0b000 r--s 0021f000 103:00 104958042                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/itextpdf-5.5.13.jar
+7fa7c1e0b000-7fa7c1e13000 r--s 00073000 103:00 104958000                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-lang3-3.8.1.jar
+7fa7c1e13000-7fa7c1e14000 r--s 00002000 103:00 104958108                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-i18n-1.10.jar
+7fa7c1e14000-7fa7c1e1f000 r--s 000b6000 103:00 104957327                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jgraphx-3.4.1.3.jar
+7fa7c1e1f000-7fa7c1e2b000 r--s 0009f000 103:00 104958089                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-bridge-1.10.jar
+7fa7c1e2b000-7fa7c1e3c000 r--s 000c5000 103:00 104958045                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/legacy-imglib1-1.1.9.jar
+7fa7c1e3c000-7fa7c1e3d000 r--s 0000b000 103:00 104958049                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/VectorString-2.0.2.jar
+7fa7c1e3d000-7fa7c1e40000 r--s 00014000 103:00 104958001                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-ij-2.0.0-beta-44.jar
+7fa7c1e40000-7fa7c1e44000 r--s 00041000 103:00 104957998                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jsch-0.1.55.jar
+7fa7c1e44000-7fa7c1e50000 r--s 000ae000 103:00 104957437                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/stats-0.8.1906.jar
+7fa7c1e50000-7fa7c1e54000 r--s 00014000 103:00 104957454                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/xz-1.0.jar
+7fa7c1e54000-7fa7c1e55000 r--s 00005000 103:00 104957398                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/renjin-appl-0.8.1906.jar
+7fa7c1e55000-7fa7c1e67000 r--s 0009c000 103:00 104957283                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-deprecated-0.1.2.jar
+7fa7c1e67000-7fa7c1e6b000 r--s 00029000 103:00 104958091                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-dom-1.10.jar
+7fa7c1e6b000-7fa7c1e70000 r--s 00060000 103:00 104957369                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mapdb-1.0.3.jar
+7fa7c1e70000-7fa7c1e72000 r--s 0001c000 103:00 104957266                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/fiji-compat-2.0.3.jar
+7fa7c1e72000-7fa7c1e85000 r--s 000df000 103:00 104957257                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-math-2.2.jar
+7fa7c1e85000-7fa7c1e87000 r--s 00009000 103:00 104957370                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/markdownj-0.3.0-1.0.2b4.jar
+7fa7c1e87000-7fa7c1e88000 r--s 00000000 103:00 104957449                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/xerbla-0.8.jar
+7fa7c1e88000-7fa7c1e8a000 r--s 00003000 103:00 104957207                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/base64-2.3.8.jar
+7fa7c1e8a000-7fa7c1e97000 r--s 000dc000 103:00 104958037                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/ome-poi-5.3.3.jar
+7fa7c1e97000-7fa7c1e99000 r--s 00015000 103:00 104958113                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/ome-codecs-0.2.3.jar
+7fa7c1e99000-7fa7c1e9b000 r--s 00020000 103:00 104958032                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/formats-api-6.0.1.jar
+7fa7c1e9b000-7fa7c1ea1000 r--s 000a1000 103:00 104958033                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/formats-bsd-6.0.1.jar
+7fa7c1ea1000-7fa7c1ea4000 r--s 00020000 103:00 104958105                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/ome-common-6.0.0.jar
+7fa7c1ea4000-7fa7c1eab000 r--s 0014c000 103:00 104958034                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/formats-gpl-6.0.1.jar
+7fa7c1eab000-7fa7c1eac000 r--s 0007a000 103:00 104957231                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/jxrlib-all-0.2.1.jar
+7fa7c1eac000-7fa7c1ebc000 r--s 000f1000 103:00 104957235                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/ome-jai-0.1.0.jar
+7fa7c1ebc000-7fa7c1ebe000 r--s 0013b000 103:00 104958040                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/turbojpeg-6.0.1.jar
+7fa7c1ebe000-7fa7c1ece000 r--s 000ed000 103:00 104958035                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/jai_imageio-5.1.10.jar
+7fa7c1ece000-7fa7c1ecf000 r--s 00003000 103:00 104958036                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/metakit-5.3.2.jar
+7fa7c1ecf000-7fa7c1ed2000 r--s 00014000 103:00 104958106                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/ome-mdbtools-5.3.2.jar
+7fa7c1ed2000-7fa7c1ed7000 r--s 0009b000 103:00 104958038                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/ome-xml-6.0.0.jar
+7fa7c1ed7000-7fa7c1edc000 r--s 0009b000 103:00 104958039                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bio-formats/specification-6.0.0.jar
+7fa7c1edc000-7fa7c1ede000 r--s 00004000 103:00 104957199                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ahocorasick-0.2.4.jar
+7fa7c1ede000-7fa7c1edf000 r--s 00004000 103:00 104957202                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/asm-analysis-4.0.jar
+7fa7c1edf000-7fa7c1ee2000 r--s 00026000 103:00 104957260                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/datasets-0.8.1906.jar
+7fa7c1ee2000-7fa7c1ee6000 r--s 00167000 103:00 104958044                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jna-4.5.2.jar
+7fa7c1ee6000-7fa7c1ee8000 r--s 00005000 103:00 104958095                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-script-1.10.jar
+7fa7c1ee8000-7fa7c1eed000 r--s 00096000 103:00 104957681                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/jsse.jar
+7fa7c1eed000-7fa7c1ef8000 r--s 0015c000 103:00 104957347                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jpedalSTD-2.80b11.jar
+7fa7c1ef8000-7fa7c1ef9000 r--s 0000a000 103:00 104958020                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/asm-util-5.0.4.jar
+7fa7c1ef9000-7fa7c1f02000 r--s 0007f000 103:00 104957320                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jep-2.4.2.jar
+7fa7c1f02000-7fa7c1f04000 r--s 0000d000 103:00 104957241                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/blas-0.8.jar
+7fa7c1f04000-7fa7c1f05000 r--s 00004000 103:00 104957428                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-java-0.4.1.jar
+7fa7c1f05000-7fa7c1f07000 r--s 00006000 103:00 104958010                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/asm-tree-5.0.4.jar
+7fa7c1f07000-7fa7c1f12000 r--s 00099000 103:00 104958102                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/xmlgraphics-commons-2.3.jar
+7fa7c1f12000-7fa7c1f15000 r--s 00010000 103:00 104957200                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/args4j-2.0.25.jar
+7fa7c1f15000-7fa7c1f17000 r--s 00008000 103:00 104958072                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scifio-cli-0.5.0.jar
+7fa7c1f17000-7fa7c1f18000 r--s 00000000 103:00 104957342                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jocl-main-2.3.2.jar
+7fa7c1f18000-7fa7c1f39000 r--s 001e0000 103:00 104957329                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jhotdraw-7.6.0.jar
+7fa7c1f39000-7fa7c1f3c000 r--s 00012000 103:00 104957881                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mastodon-selection-creator-0.0.1.jar
+7fa7c1f3c000-7fa7c1f3d000 r--s 0000e000 103:00 104958119                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jsr166y-1.7.0.jar
+7fa7c1f3d000-7fa7c1f43000 r--s 00037000 103:00 104958120                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/multiverse-core-0.7.0.jar
+7fa7c1f43000-7fa7c1f59000 r--s 00124000 103:00 104958111                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ivy-2.4.0.jar
+7fa7c1f59000-7fa7c1fa5000 r--s 0040c000 103:00 104957275                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/groovy-2.4.8.jar
+7fa7c1fa5000-7fa7c1fa6000 r--s 00003000 103:00 104958029                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-groovy-0.2.7.jar
+7fa7c1fa6000-7fa7c1fb4000 r--s 000c3000 103:00 104958131                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jgrapht-core-1.3.0.jar
+7fa7c1fb4000-7fa7c1fb7000 r--s 0001d000 103:00 104958124                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/groovy-json-2.4.8.jar
+7fa7c1fb7000-7fa7c1fb9000 r--s 00001000 103:00 104957426                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-clojure-0.1.6.jar
+7fa7c1fb9000-7fa7c1fbe000 r--s 00039000 103:00 104957395                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/plexus-utils-1.5.6.jar
+7fa7c1fbe000-7fa7c1fc2000 r--s 0002a000 103:00 104957865                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-ui-swing-0.12.0.jar
+7fa7c1fc2000-7fa7c1fc3000 r--s 00005000 103:00 104957417                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-plugins-commands-0.2.3.jar
+7fa7c1fc3000-7fa7c1fc6000 r--s 00099000 103:00 104957875                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/joml-1.9.12.jar
+7fa7c1fc6000-7fa7c1fc7000 r--s 00001000 103:00 104957429                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-javascript-0.4.4.jar
+7fa7c1fc7000-7fa7c1fd1000 r--s 0007f000 103:00 104957845                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bigdataviewer-core-6.0.1.jar
+7fa7c1fd1000-7fa7c1fd8000 r--s 00056000 103:00 104957879                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mastodon-tracking-1.0.0-beta-5.jar
+7fa7c1fd8000-7fa7c1fda000 r--s 00007000 103:00 104958099                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-xml-1.10.jar
+7fa7c1fda000-7fa7c1fdc000 r--s 00002000 103:00 104957439                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/swing-worker-1.1.jar
+7fa7c1fdc000-7fa7c1fde000 r--s 0000f000 103:00 104957263                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/f2jutil-0.8.jar
+7fa7c1fde000-7fa7c1fdf000 r--s 0000e000 103:00 104957378                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/minimaven-2.2.1.jar
+7fa7c1fdf000-7fa7c1fe1000 r--s 00001000 103:00 104957883                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-listeners-1.0.0-beta-2.jar
+7fa7c1fe1000-7fa7c1fe4000 r--s 00013000 103:00 104957846                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bigdataviewer-vistools-1.0.0-beta-13.jar
+7fa7c1fe4000-7fa7c2011000 r--s 0084f000 103:00 104958019                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jruby-stdlib-9.1.17.0.jar
+7fa7c2011000-7fa7c2013000 r--s 00000000 103:00 104958127                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/modulator-1.0.jar
+7fa7c2013000-7fa7c2015000 r--s 00007000 103:00 104957382                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/nailgun-server-0.9.1.jar
+7fa7c2015000-7fa7c2017000 r--s 00010000 103:00 104957356                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jzlib-1.1.3.jar
+7fa7c2017000-7fa7c2018000 r--s 00000000 103:00 104958129                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/unsafe-fences-1.0.jar
+7fa7c2018000-7fa7c2019000 r--s 0000a000 103:00 104958016                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/invokebinder-1.10.jar
+7fa7c2019000-7fa7c201b000 r--s 00003000 103:00 104958130                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/dirgra-0.3.jar
+7fa7c201b000-7fa7c202b000 r--s 00182000 103:00 104958015                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jcodings-1.0.27.jar
+7fa7c202b000-7fa7c202c000 r--s 00002000 103:00 104958014                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bytelist-1.0.15.jar
+7fa7c202c000-7fa7c202f000 r--s 0002f000 103:00 104958018                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/joni-2.1.15.jar
+7fa7c202f000-7fa7c2031000 r--s 000a1000 103:00 104958009                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jffi-1.2.16-native.jar
+7fa7c2031000-7fa7c2034000 r--s 00022000 103:00 104958027                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jffi-1.2.16.jar
+7fa7c2034000-7fa7c203a000 r--s 00052000 103:00 104958025                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jnr-constants-0.9.9.jar
+7fa7c203a000-7fa7c203f000 r--s 00036000 103:00 104958023                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jnr-posix-3.0.44.jar
+7fa7c203f000-7fa7c2040000 r--s 0000a000 103:00 104958008                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jnr-unixsocket-0.17.jar
+7fa7c2040000-7fa7c2043000 r--s 00033000 103:00 104957338                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jnr-x86asm-1.0.2.jar
+7fa7c2043000-7fa7c2044000 r--s 00006000 103:00 104958021                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jnr-enxio-0.16.jar
+7fa7c2044000-7fa7c2047000 r--s 0000d000 103:00 104958011                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jnr-netdb-1.1.6.jar
+7fa7c2047000-7fa7c20fb000 r--s 00864000 103:00 104958022                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jruby-core-9.1.17.0.jar
+7fa7c20fb000-7fa7c20fd000 r--s 00001000 103:00 104958006                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scripting-jruby-0.3.0.jar
+7fa7c20fd000-7fa7c2101000 r--s 00022000 103:00 104957247                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/codemodel-2.6.jar
+7fa7c2101000-7fa7c2105000 r--s 00035000 103:00 104958096                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-svg-dom-1.10.jar
+7fa7c2105000-7fa7c2107000 r--s 00002000 103:00 104958092                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-ext-1.10.jar
+7fa7c2107000-7fa7c212e000 r--s 001f6000 103:00 104957258                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-math3-3.6.1.jar
+7fa7c212e000-7fa7c2130000 r--s 0006f000 103:00 104957849                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/multiview-simulation-0.2.0.jar
+7fa7c2130000-7fa7c2141000 r--s 0016c000 103:00 104957323                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jfreechart-1.5.0.jar
+7fa7c2141000-7fa7c2146000 r--s 00052000 103:00 104957869                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mpicbg-1.2.0.jar
+7fa7c2146000-7fa7c2151000 r--s 00069000 103:00 104957368                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/logback-core-1.2.3.jar
+7fa7c2151000-7fa7c2153000 r--s 0000a000 103:00 104958028                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/json-20090211.jar
+7fa7c2153000-7fa7c2158000 r--s 00018000 103:00 104957193                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/JWlz-1.4.0.jar
+7fa7c2158000-7fa7c218a000 r--s 0042f000 103:00 104957384                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/netcdf-4.3.22.jar
+7fa7c218a000-7fa7c218c000 r--s 0000e000 103:00 104958041                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-logging-1.2.jar
+7fa7c218c000-7fa7c21a3000 r--s 00112000 103:00 104957450                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/xercesImpl-2.8.1.jar
+7fa7c21a3000-7fa7c21a5000 r--s 0001b000 103:00 104957453                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/xmpcore-5.1.2.jar
+7fa7c21a5000-7fa7c21a9000 r--s 00030000 103:00 104957374                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/metadata-extractor-2.6.2.jar
+7fa7c21a9000-7fa7c21ac000 r--s 00018000 103:00 104957394                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/perf4j-0.9.13.jar
+7fa7c21ac000-7fa7c21ae000 r--s 00009000 103:00 104957387                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/objenesis-2.1.jar
+7fa7c21ae000-7fa7c21b0000 r--s 00000000 103:00 104957379                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/minlog-1.2.jar
+7fa7c21b0000-7fa7c21b6000 r--s 0004d000 103:00 104957357                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/kryo-2.24.0.jar
+7fa7c21b6000-7fa7c21b8000 r--s 00007000 103:00 104957324                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jgoodies-common-1.7.0.jar
+7fa7c21b8000-7fa7c21ba000 r--s 0001b000 103:00 104957325                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jgoodies-forms-1.7.2.jar
+7fa7c21ba000-7fa7c21bc000 r--s 00009000 103:00 104957434                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/slf4j-api-1.7.25.jar
+7fa7c21bc000-7fa7c21c0000 r--s 00023000 103:00 104958073                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-algorithm-gpl-0.2.3.jar
+7fa7c21c0000-7fa7c21c2000 r--s 00004000 103:00 104957868                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-algorithm-fft-0.2.0.jar
+7fa7c21c2000-7fa7c21d7000 r--s 001d7000 103:00 104957377                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mines-jtk-20151125.jar
+7fa7c21d7000-7fa7c21da000 r--s 00024000 103:00 104958002                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ij1-patcher-0.12.9.jar
+7fa7c21da000-7fa7c21dc000 r--s 00015000 103:00 104957267                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/fiji-lib-2.1.2.jar
+7fa7c21dc000-7fa7c21de000 r--s 0000d000 103:00 104957885                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/klb-bdv-0.2.1.jar
+7fa7c21de000-7fa7c2202000 r--s 0031e000 103:00 104957344                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jogl-all-2.3.2.jar
+7fa7c2202000-7fa7c2208000 r--s 0004f000 103:00 104957271                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/gluegen-rt-2.3.2.jar
+7fa7c2208000-7fa7c2215000 r--s 001ce000 103:00 104957308                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/j3dcore-1.6.0-scijava-2.jar
+7fa7c2215000-7fa7c2221000 r--s 0006a000 103:00 104958087                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batik-anim-1.10.jar
+7fa7c2221000-7fa7c222c000 r--s 0006f000 103:00 104957352                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jtransforms-2.4.jar
+7fa7c222c000-7fa7c2239000 r--s 00083000 103:00 104957251                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-collections-3.2.2.jar
+7fa7c2239000-7fa7c224a000 r--s 000aa000 103:00 104957858                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-5.6.3.jar
+7fa7c224a000-7fa7c224d000 r--s 0001b000 103:00 104958086                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ui-behaviour-1.7.4.jar
+7fa7c224d000-7fa7c225f000 r--s 000c9000 103:00 104957859                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-common-2.76.1.jar
+7fa7c225f000-7fa7c2264000 r--s 00036000 103:00 104958075                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/gson-2.8.5.jar
+7fa7c2264000-7fa7c2269000 r--s 00041000 103:00 104958114                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-lang-2.6.jar
+7fa7c2269000-7fa7c2284000 r--s 008d1000 103:00 104957328                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jhdf5-14.12.6.jar
+7fa7c2284000-7fa7c2286000 r--s 0000e000 103:00 104958071                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-ui-2.0.0.jar
+7fa7c2286000-7fa7c228b000 r--s 00025000 103:00 104958112                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-cache-1.0.0-beta-11.jar
+7fa7c228b000-7fa7c228e000 r--s 0001a000 103:00 104957864                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-realtransform-2.1.0.jar
+7fa7c228e000-7fa7c22a3000 r--s 000f4000 103:00 104957880                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/trackmate-1.0.0-beta-13.jar
+7fa7c22a3000-7fa7c22a7000 r--s 00036000 103:00 104957313                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/javacpp-0.11.jar
+7fa7c22a7000-7fa7c22ad000 r--s 00031000 103:00 104957264                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ffmpeg-2.6.1-0.11.jar
+7fa7c22ad000-7fa7c22af000 r--s 0000c000 103:00 104958017                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/asm-5.0.4.jar
+7fa7c22af000-7fa7c22de000 r--s 00239000 103:00 104957277                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/guava-21.0.jar
+7fa7c22de000-7fa7c22e1000 r--s 00026000 103:00 104957446                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/vecmath-1.6.0-scijava-2.jar
+7fa7c22e1000-7fa7c22ee000 r--s 00116000 103:00 104957402                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/rhino-1.7.6.jar
+7fa7c22ee000-7fa7c22fe000 r--s 00104000 103:00 104957358                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/languagesupport-2.6.0.jar
+7fa7c22fe000-7fa7c231f000 r--s 0018e000 103:00 104957871                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ojalgo-45.1.1.jar
+7fa7c231f000-7fa7c232b000 r--s 00087000 103:00 104957867                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-algorithm-0.11.1.jar
+7fa7c232b000-7fa7c232f000 r--s 00031000 103:00 104958126                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/groovy-xml-2.4.8.jar
+7fa7c232f000-7fa7c2333000 r--s 0002f000 103:00 104957242                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/bounce-0.18.jar
+7fa7c2333000-7fa7c233c000 r--s 00053000 103:00 104957855                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mastodon-collection-1.0.0-beta-17.jar
+7fa7c233c000-7fa7c2343000 r--s 0003a000 103:00 104957866                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imglib2-roi-0.7.0.jar
+7fa7c2343000-7fa7c235a000 r--s 000d7000 103:00 104957245                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/caffeine-2.4.0.jar
+7fa7c235a000-7fa7c236a000 r--s 000e6000 103:00 104957412                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scifio-jai-imageio-1.1.1.jar
+7fa7c236a000-7fa7c23ad000 r--s 00332000 103:00 104957246                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/clojure-1.8.0.jar
+7fa7c23ad000-7fa7c23ae000 ---p 00000000 00:00 0 
+7fa7c23ae000-7fa7c24ae000 rw-p 00000000 00:00 0 
+7fa7c24ae000-7fa7c24b1000 ---p 00000000 00:00 0 
+7fa7c24b1000-7fa7c25af000 rw-p 00000000 00:00 0 
+7fa7c25af000-7fa7c25b0000 ---p 00000000 00:00 0 
+7fa7c25b0000-7fa7c25b3000 ---p 00000000 00:00 0 
+7fa7c25b3000-7fa7c26b0000 rw-p 00000000 00:00 0 
+7fa7c26b0000-7fa7c26b1000 ---p 00000000 00:00 0 
+7fa7c26b1000-7fa7c26b4000 ---p 00000000 00:00 0 
+7fa7c26b4000-7fa7c27b1000 rw-p 00000000 00:00 0 
+7fa7c27b1000-7fa7c27b2000 ---p 00000000 00:00 0 
+7fa7c27b2000-7fa7c27b5000 ---p 00000000 00:00 0 
+7fa7c27b5000-7fa7c28b2000 rw-p 00000000 00:00 0 
+7fa7c28b2000-7fa7c28b3000 ---p 00000000 00:00 0 
+7fa7c28b3000-7fa7c28b6000 ---p 00000000 00:00 0 
+7fa7c28b6000-7fa7c29b3000 rw-p 00000000 00:00 0 
+7fa7c29b3000-7fa7c29b6000 ---p 00000000 00:00 0 
+7fa7c29b6000-7fa7c2ab4000 rw-p 00000000 00:00 0 
+7fa7c2ab4000-7fa7c2ab7000 ---p 00000000 00:00 0 
+7fa7c2ab7000-7fa7c2bb5000 rw-p 00000000 00:00 0 
+7fa7c2bb5000-7fa7c2bb8000 ---p 00000000 00:00 0 
+7fa7c2bb8000-7fa7c2cb6000 rw-p 00000000 00:00 0 
+7fa7c2cb6000-7fa7c2cb9000 ---p 00000000 00:00 0 
+7fa7c2cb9000-7fa7c2db7000 rw-p 00000000 00:00 0 
+7fa7c2db7000-7fa7c2db8000 ---p 00000000 00:00 0 
+7fa7c2db8000-7fa7c2f07000 rw-p 00000000 00:00 0 
+7fa7c2f07000-7fa7c30e0000 r--s 03d20000 103:00 104957831                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/rt.jar
+7fa7c30e0000-7fa7c39b1000 rw-p 00000000 00:00 0 
+7fa7c39b1000-7fa7c3afb000 rw-p 00000000 00:00 0 
+7fa7c3afb000-7fa7c3afc000 ---p 00000000 00:00 0 
+7fa7c3afc000-7fa7c4000000 rw-p 00000000 00:00 0 
+7fa7c4000000-7fa7c4021000 rw-p 00000000 00:00 0 
+7fa7c4021000-7fa7c8000000 ---p 00000000 00:00 0 
+7fa7c8000000-7fa7c8001000 r--s 0010a000 103:00 104957884                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/klb-0.3.6.jar
+7fa7c8001000-7fa7c8006000 r--s 00025000 103:00 104957878                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/mastodon-graph-1.0.0-beta-16.jar
+7fa7c8006000-7fa7c8008000 r--s 0001d000 103:00 104957443                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/udunits-4.3.18.jar
+7fa7c8008000-7fa7c840c000 rw-p 00000000 00:00 0 
+7fa7c840c000-7fa7c840d000 ---p 00000000 00:00 0 
+7fa7c840d000-7fa7c850d000 rw-p 00000000 00:00 0 
+7fa7c850d000-7fa7c850e000 ---p 00000000 00:00 0 
+7fa7c850e000-7fa7e7a97000 rw-p 00000000 00:00 0 
+7fa7e7a97000-7fa7eb800000 ---p 00000000 00:00 0 
+7fa7eb800000-7fa800750000 rw-p 00000000 00:00 0 
+7fa800750000-7fa815190000 ---p 00000000 00:00 0 
+7fa815190000-7fa86eee1000 rw-p 00000000 00:00 0 
+7fa86eee1000-7fafdc000000 ---p 00000000 00:00 0 
+7fafdc000000-7fafdc041000 rw-p 00000000 00:00 0 
+7fafdc041000-7fafe0000000 ---p 00000000 00:00 0 
+7fafe0000000-7fafe0028000 r--s 00241000 103:00 104957442                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/trove4j-3.0.3.jar
+7fafe0028000-7fafe002c000 r--s 00031000 103:00 104957253                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/commons-io-2.6.jar
+7fafe002c000-7fafe002f000 r--s 0001a000 103:00 104957874                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/prettytime-4.0.1.Final.jar
+7fafe002f000-7fafe0031000 r--s 0000e000 103:00 104957872                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-search-0.5.0.jar
+7fafe0031000-7fafe0033000 r--s 00007000 103:00 104957318                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jdatepicker-1.3.2.jar
+7fafe0033000-7fafe0035000 r--s 00005000 103:00 104957386                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/object-inspector-0.1.jar
+7fafe0035000-7fafe0037000 r--s 00001000 103:00 104957438                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/swing-checkbox-tree-1.0.2.jar
+7fafe0037000-7fafe0039000 r--s 00011000 103:00 104957376                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/miglayout-3.7.4-swing.jar
+7fafe0039000-7fafe0123000 rw-p 00000000 00:00 0 
+7fafe0123000-7fafe01c7000 ---p 00000000 00:00 0 
+7fafe01c7000-7fafe0497000 rw-p 00000000 00:00 0 
+7fafe0497000-7fafe3fff000 ---p 00000000 00:00 0 
+7fafe3fff000-7fafe4000000 rw-p 00000000 00:00 0 
+7fafe4000000-7fafe4021000 rw-p 00000000 00:00 0 
+7fafe4021000-7fafe8000000 ---p 00000000 00:00 0 
+7fafe8000000-7fafe802c000 rw-p 00000000 00:00 0 
+7fafe802c000-7fafec000000 ---p 00000000 00:00 0 
+7fafec000000-7fafec03e000 rw-p 00000000 00:00 0 
+7fafec03e000-7faff0000000 ---p 00000000 00:00 0 
+7faff0000000-7faff0037000 rw-p 00000000 00:00 0 
+7faff0037000-7faff4000000 ---p 00000000 00:00 0 
+7faff4000000-7faff4043000 rw-p 00000000 00:00 0 
+7faff4043000-7faff8000000 ---p 00000000 00:00 0 
+7faff8000000-7faff8022000 rw-p 00000000 00:00 0 
+7faff8022000-7faffc000000 ---p 00000000 00:00 0 
+7faffc000000-7faffc029000 rw-p 00000000 00:00 0 
+7faffc029000-7fb000000000 ---p 00000000 00:00 0 
+7fb000000000-7fb000001000 r--s 0000a000 103:00 104957870                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/parsington-1.0.4.jar
+7fb000001000-7fb000008000 r--s 0005a000 103:00 104957445                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/utils-0.8.1906.jar
+7fb000008000-7fb003019000 rw-p 00000000 00:00 0 
+7fb003019000-7fb00301a000 ---p 00000000 00:00 0 
+7fb00301a000-7fb00311a000 rw-p 00000000 00:00 0 
+7fb00311a000-7fb00311b000 ---p 00000000 00:00 0 
+7fb00311b000-7fb00321b000 rw-p 00000000 00:00 0 
+7fb00321b000-7fb00321c000 ---p 00000000 00:00 0 
+7fb00321c000-7fb00331c000 rw-p 00000000 00:00 0 
+7fb00331c000-7fb00331d000 ---p 00000000 00:00 0 
+7fb00331d000-7fb00341d000 rw-p 00000000 00:00 0 
+7fb00341d000-7fb00341e000 ---p 00000000 00:00 0 
+7fb00341e000-7fb00351e000 rw-p 00000000 00:00 0 
+7fb00351e000-7fb00351f000 ---p 00000000 00:00 0 
+7fb00351f000-7fb003681000 rw-p 00000000 00:00 0 
+7fb003681000-7fb0039df000 ---p 00000000 00:00 0 
+7fb0039df000-7fb00525f000 rwxp 00000000 00:00 0 
+7fb00525f000-7fb0129df000 ---p 00000000 00:00 0 
+7fb0129df000-7fb0129f9000 r-xp 00000000 103:00 104957755                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libzip.so
+7fb0129f9000-7fb012bf9000 ---p 0001a000 103:00 104957755                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libzip.so
+7fb012bf9000-7fb012bfa000 rw-p 0001a000 103:00 104957755                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libzip.so
+7fb012bfa000-7fb012c05000 r-xp 00000000 08:52 8409683                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7fb012c05000-7fb012e04000 ---p 0000b000 08:52 8409683                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7fb012e04000-7fb012e05000 r--p 0000a000 08:52 8409683                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7fb012e05000-7fb012e06000 rw-p 0000b000 08:52 8409683                    /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7fb012e06000-7fb012e0c000 rw-p 00000000 00:00 0 
+7fb012e0c000-7fb012e23000 r-xp 00000000 08:52 8409680                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7fb012e23000-7fb013022000 ---p 00017000 08:52 8409680                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7fb013022000-7fb013023000 r--p 00016000 08:52 8409680                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7fb013023000-7fb013024000 rw-p 00017000 08:52 8409680                    /lib/x86_64-linux-gnu/libnsl-2.27.so
+7fb013024000-7fb013026000 rw-p 00000000 00:00 0 
+7fb013026000-7fb013ce4000 r-xp 00000000 103:00 104957782                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/server/libjvm.so
+7fb013ce4000-7fb013ee3000 ---p 00cbe000 103:00 104957782                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/server/libjvm.so
+7fb013ee3000-7fb013fbc000 rw-p 00cbd000 103:00 104957782                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/server/libjvm.so
+7fb013fbc000-7fb014000000 rw-p 00000000 00:00 0 
+7fb014000000-7fb014084000 rw-p 00000000 00:00 0 
+7fb014084000-7fb018000000 ---p 00000000 00:00 0 
+7fb018000000-7fb018002000 r--s 0000a000 103:00 104957422                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-ui-awt-0.1.6.jar
+7fb018002000-7fb018004000 r--s 00008000 103:00 104957876                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scijava-table-0.2.0.jar
+7fb018004000-7fb018006000 r--s 00004000 103:00 104958122                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/batch-processor-0.3.0.jar
+7fb018006000-7fb01800d000 r--s 00043000 103:00 104958024                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/snakeyaml-1.23.jar
+7fb01800d000-7fb018029000 r--s 00136000 103:00 104958118                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/gpars-1.2.1.jar
+7fb018029000-7fb01802f000 r--s 00045000 103:00 104957319                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jdom2-2.0.6.jar
+7fb01802f000-7fb018038000 r--s 0006f000 103:00 104957366                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/log4j-1.2.17.jar
+7fb018038000-7fb01803e000 r--s 0004f000 103:00 104957261                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ejml-0.24.jar
+7fb01803e000-7fb0180c2000 rw-p 00000000 00:00 0 
+7fb0180c2000-7fb0180c3000 ---p 00000000 00:00 0 
+7fb0180c3000-7fb0181c3000 rw-p 00000000 00:00 0 
+7fb0181c3000-7fb0181ce000 r-xp 00000000 08:52 8409685                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7fb0181ce000-7fb0183cd000 ---p 0000b000 08:52 8409685                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7fb0183cd000-7fb0183ce000 r--p 0000a000 08:52 8409685                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7fb0183ce000-7fb0183cf000 rw-p 0000b000 08:52 8409685                    /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7fb0183cf000-7fb0183d7000 r-xp 00000000 08:52 8409681                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7fb0183d7000-7fb0185d7000 ---p 00008000 08:52 8409681                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7fb0185d7000-7fb0185d8000 r--p 00008000 08:52 8409681                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7fb0185d8000-7fb0185d9000 rw-p 00009000 08:52 8409681                    /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7fb0185d9000-7fb018603000 r-xp 00000000 103:00 104957753                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjava.so
+7fb018603000-7fb018803000 ---p 0002a000 103:00 104957753                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjava.so
+7fb018803000-7fb018805000 rw-p 0002a000 103:00 104957753                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libjava.so
+7fb018805000-7fb018812000 r-xp 00000000 103:00 104957775                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libverify.so
+7fb018812000-7fb018a12000 ---p 0000d000 103:00 104957775                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libverify.so
+7fb018a12000-7fb018a14000 rw-p 0000d000 103:00 104957775                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libverify.so
+7fb018a14000-7fb018a19000 r-xp 00000000 08:52 2493112                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7fb018a19000-7fb018c18000 ---p 00005000 08:52 2493112                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7fb018c18000-7fb018c19000 r--p 00004000 08:52 2493112                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7fb018c19000-7fb018c1a000 rw-p 00005000 08:52 2493112                    /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7fb018c1a000-7fb018c23000 r-xp 00000000 08:52 2499791                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fb018c23000-7fb018e22000 ---p 00009000 08:52 2499791                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fb018e22000-7fb018e23000 r--p 00008000 08:52 2499791                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fb018e23000-7fb018e24000 rw-p 00009000 08:52 2499791                    /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7fb018e24000-7fb018e2d000 r-xp 00000000 08:52 2490866                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7fb018e2d000-7fb01902c000 ---p 00009000 08:52 2490866                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7fb01902c000-7fb01902d000 r--p 00008000 08:52 2490866                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7fb01902d000-7fb01902e000 rw-p 00009000 08:52 2490866                    /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7fb01902e000-7fb01930c000 r--p 00000000 08:52 2536166                    /usr/lib/locale/locale-archive
+7fb01930c000-7fb01930d000 ---p 00000000 00:00 0 
+7fb01930d000-7fb019b0d000 rw-p 00000000 00:00 0 
+7fb019b0d000-7fb019b14000 r-xp 00000000 08:52 8409690                    /lib/x86_64-linux-gnu/librt-2.27.so
+7fb019b14000-7fb019d13000 ---p 00007000 08:52 8409690                    /lib/x86_64-linux-gnu/librt-2.27.so
+7fb019d13000-7fb019d14000 r--p 00006000 08:52 8409690                    /lib/x86_64-linux-gnu/librt-2.27.so
+7fb019d14000-7fb019d15000 rw-p 00007000 08:52 8409690                    /lib/x86_64-linux-gnu/librt-2.27.so
+7fb019d15000-7fb019d28000 r-xp 00000000 08:52 8409738                    /lib/x86_64-linux-gnu/libbsd.so.0.8.7
+7fb019d28000-7fb019f27000 ---p 00013000 08:52 8409738                    /lib/x86_64-linux-gnu/libbsd.so.0.8.7
+7fb019f27000-7fb019f28000 r--p 00012000 08:52 8409738                    /lib/x86_64-linux-gnu/libbsd.so.0.8.7
+7fb019f28000-7fb019f29000 rw-p 00013000 08:52 8409738                    /lib/x86_64-linux-gnu/libbsd.so.0.8.7
+7fb019f29000-7fb019f2a000 rw-p 00000000 00:00 0 
+7fb019f2a000-7fb019f2f000 r-xp 00000000 08:52 2491290                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fb019f2f000-7fb01a12e000 ---p 00005000 08:52 2491290                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fb01a12e000-7fb01a12f000 r--p 00004000 08:52 2491290                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fb01a12f000-7fb01a130000 rw-p 00005000 08:52 2491290                    /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7fb01a130000-7fb01a132000 r-xp 00000000 08:52 2498604                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fb01a132000-7fb01a332000 ---p 00002000 08:52 2498604                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fb01a332000-7fb01a333000 r--p 00002000 08:52 2498604                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fb01a333000-7fb01a334000 rw-p 00003000 08:52 2498604                    /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7fb01a334000-7fb01a35a000 r-xp 00000000 08:52 2493247                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fb01a35a000-7fb01a55a000 ---p 00026000 08:52 2493247                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fb01a55a000-7fb01a55b000 r--p 00026000 08:52 2493247                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fb01a55b000-7fb01a55c000 rw-p 00027000 08:52 2493247                    /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7fb01a55c000-7fb01a6f9000 r-xp 00000000 08:52 8409677                    /lib/x86_64-linux-gnu/libm-2.27.so
+7fb01a6f9000-7fb01a8f8000 ---p 0019d000 08:52 8409677                    /lib/x86_64-linux-gnu/libm-2.27.so
+7fb01a8f8000-7fb01a8f9000 r--p 0019c000 08:52 8409677                    /lib/x86_64-linux-gnu/libm-2.27.so
+7fb01a8f9000-7fb01a8fa000 rw-p 0019d000 08:52 8409677                    /lib/x86_64-linux-gnu/libm-2.27.so
+7fb01a8fa000-7fb01a90b000 r-xp 00000000 08:52 2498617                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fb01a90b000-7fb01ab0a000 ---p 00011000 08:52 2498617                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fb01ab0a000-7fb01ab0b000 r--p 00010000 08:52 2498617                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fb01ab0b000-7fb01ab0c000 rw-p 00011000 08:52 2498617                    /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7fb01ab0c000-7fb01ac3f000 r-xp 00000000 08:52 2493047                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fb01ac3f000-7fb01ae3f000 ---p 00133000 08:52 2493047                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fb01ae3f000-7fb01ae40000 r--p 00133000 08:52 2493047                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fb01ae40000-7fb01ae44000 rw-p 00134000 08:52 2493047                    /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7fb01ae44000-7fb01aea5000 r-xp 00000000 103:00 104957804                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libsplashscreen.so
+7fb01aea5000-7fb01b0a5000 ---p 00061000 103:00 104957804                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libsplashscreen.so
+7fb01b0a5000-7fb01b0a6000 rw-p 00061000 103:00 104957804                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/amd64/libsplashscreen.so
+7fb01b0a6000-7fb01b0a9000 rw-p 00000000 00:00 0 
+7fb01b0a9000-7fb01b290000 r-xp 00000000 08:52 8409673                    /lib/x86_64-linux-gnu/libc-2.27.so
+7fb01b290000-7fb01b490000 ---p 001e7000 08:52 8409673                    /lib/x86_64-linux-gnu/libc-2.27.so
+7fb01b490000-7fb01b494000 r--p 001e7000 08:52 8409673                    /lib/x86_64-linux-gnu/libc-2.27.so
+7fb01b494000-7fb01b496000 rw-p 001eb000 08:52 8409673                    /lib/x86_64-linux-gnu/libc-2.27.so
+7fb01b496000-7fb01b49a000 rw-p 00000000 00:00 0 
+7fb01b49a000-7fb01b4b4000 r-xp 00000000 08:52 8409688                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7fb01b4b4000-7fb01b6b3000 ---p 0001a000 08:52 8409688                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7fb01b6b3000-7fb01b6b4000 r--p 00019000 08:52 8409688                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7fb01b6b4000-7fb01b6b5000 rw-p 0001a000 08:52 8409688                    /lib/x86_64-linux-gnu/libpthread-2.27.so
+7fb01b6b5000-7fb01b6b9000 rw-p 00000000 00:00 0 
+7fb01b6b9000-7fb01b6bc000 r-xp 00000000 08:52 8409676                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7fb01b6bc000-7fb01b8bb000 ---p 00003000 08:52 8409676                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7fb01b8bb000-7fb01b8bc000 r--p 00002000 08:52 8409676                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7fb01b8bc000-7fb01b8bd000 rw-p 00003000 08:52 8409676                    /lib/x86_64-linux-gnu/libdl-2.27.so
+7fb01b8bd000-7fb01b8e4000 r-xp 00000000 08:52 8389721                    /lib/x86_64-linux-gnu/ld-2.27.so
+7fb01b8e4000-7fb01b8e5000 r--s 00001000 103:00 104958128                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-plugins-batch-0.1.1.jar
+7fb01b8e5000-7fb01b8e9000 r--s 00037000 103:00 104957852                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/ST4-4.0.8.jar
+7fb01b8e9000-7fb01b8ea000 r--s 00004000 103:00 104957330                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jitk-tps-3.0.0.jar
+7fb01b8ea000-7fb01b8ec000 r--s 00008000 103:00 104957312                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/jama-1.0.3.jar
+7fb01b8ec000-7fb01b8ef000 r--s 00018000 103:00 104958076                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/spim_data-2.2.2.jar
+7fb01b8ef000-7fb01b8f1000 r--s 00009000 103:00 104958013                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/asm-commons-5.0.4.jar
+7fb01b8f1000-7fb01b8f2000 r--s 00003000 103:00 104958026                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/options-1.4.jar
+7fb01b8f2000-7fb01b8f5000 r--s 00012000 103:00 104957262                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/eventbus-1.4.jar
+7fb01b8f5000-7fb01b8f7000 r--s 00003000 103:00 104957270                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/gentyref-1.1.0.jar
+7fb01b8f7000-7fb01b942000 rw-p 00000000 00:00 0 
+7fb01b942000-7fb01b943000 ---p 00000000 00:00 0 
+7fb01b943000-7fb01ba43000 rw-p 00000000 00:00 0 
+7fb01ba43000-7fb01ba44000 rw-s 00000000 00:06 680                        /dev/nvidiactl
+7fb01ba44000-7fb01ba47000 ---p 00000000 00:00 0 
+7fb01ba47000-7fb01ba7d000 rw-p 00000000 00:00 0 
+7fb01ba7d000-7fb01ba7e000 r--p 00000000 00:00 0 
+7fb01ba7e000-7fb01ba84000 r--s 002f8000 103:00 104957641                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66/jre/lib/charsets.jar
+7fb01ba84000-7fb01ba87000 rw-p 00000000 00:00 0 
+7fb01ba87000-7fb01ba88000 r--s 00006000 103:00 104957873                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-mesh-0.7.1.jar
+7fb01ba88000-7fb01ba8e000 r--s 00080000 103:00 104957407                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/scala-xml_2.12-1.0.6.jar
+7fb01ba8e000-7fb01ba8f000 r--s 00005000 103:00 104957284                 /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-launcher-4.0.5.jar
+7fb01ba8f000-7fb01bad1000 rw-p 00000000 00:00 0 
+7fb01bad1000-7fb01bad9000 rw-s 00000000 08:52 5507525                    /tmp/hsperfdata_lblondel/1697
+7fb01bad9000-7fb01bada000 rw-p 00000000 00:00 0 
+7fb01bada000-7fb01badb000 r--p 00000000 00:00 0 
+7fb01badb000-7fb01bae2000 r--s 00000000 08:52 2850729                    /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7fb01bae2000-7fb01bae4000 rw-p 00000000 00:00 0 
+7fb01bae4000-7fb01bae5000 r--p 00027000 08:52 8389721                    /lib/x86_64-linux-gnu/ld-2.27.so
+7fb01bae5000-7fb01bae6000 rw-p 00028000 08:52 8389721                    /lib/x86_64-linux-gnu/ld-2.27.so
+7fb01bae6000-7fb01bae7000 rw-p 00000000 00:00 0 
+7ffd4830b000-7ffd4830e000 ---p 00000000 00:00 0 
+7ffd4830e000-7ffd4840b000 rw-p 00000000 00:00 0                          [stack]
+7ffd48415000-7ffd48418000 r--p 00000000 00:00 0                          [vvar]
+7ffd48418000-7ffd4841a000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Dpython.cachedir.skip=true -Dplugins.dir=/home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app -Xmx32520m -Xincgc -XX:PermSize=128m 
+java_command: <unknown>
+java_class_path (initial): /home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/jars/imagej-launcher-4.0.5.jar
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=/home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/java/linux-amd64/jdk1.8.0_66//jre
+PATH=/home/lblondel/anaconda3/envs/datascience/bin:/home/lblondel/.rbenv/plugins/ruby-build/bin:/home/lblondel/.rbenv/shims:/home/lblondel/.rbenv/bin:/home/lblondel/anaconda3/condabin:/home/lblondel/anaconda3/bin:/home/lblondel/Software/google-cloud-sdk/bin:/opt/infinit/bin:/usr/local/cuda-10.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/lblondel/bin:/home/lblondel/Software/snap
+LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64:/home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/lib/linux64:/home/lblondel/Documents/Harvard/ExtavourLab/projects/Project_Parhyale/Scripts/LightSheetUtils/snakemake-workflows/Fiji.app/mm/linux64
+SHELL=/bin/zsh
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaba2a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaba2a0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x917710], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x917710], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x917710], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x917710], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x918d40], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x91a140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x91a140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x91a140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x91a140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.2 LTS"
+
+uname:Linux 4.15.0-48-generic #51-Ubuntu SMP Wed Apr 3 08:28:49 UTC 2019 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 64000, NOFILE 4096, AS infinity
+load average:5.46 4.77 4.25
+
+/proc/meminfo:
+MemTotal:       65858376 kB
+MemFree:        26398708 kB
+MemAvailable:   45008200 kB
+Buffers:         8780584 kB
+Cached:          6212472 kB
+SwapCached:         8116 kB
+Active:         23993140 kB
+Inactive:        9364624 kB
+Active(anon):   16919884 kB
+Inactive(anon):  2191400 kB
+Active(file):    7073256 kB
+Inactive(file):  7173224 kB
+Unevictable:        1656 kB
+Mlocked:            1656 kB
+SwapTotal:      14647292 kB
+SwapFree:       14229756 kB
+Dirty:             30904 kB
+Writeback:             0 kB
+AnonPages:      18360576 kB
+Mapped:          1997008 kB
+Shmem:           1026740 kB
+Slab:            5416532 kB
+SReclaimable:    5094568 kB
+SUnreclaim:       321964 kB
+KernelStack:       43184 kB
+PageTables:       181588 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    47576480 kB
+Committed_AS:   48461160 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:    34531856 kB
+DirectMap2M:    32464896 kB
+DirectMap1G:     2097152 kB
+
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 63 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 3584.808
+cache size	: 10240 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6984.77
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 3570.946
+cache size	: 10240 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6984.77
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 3516.505
+cache size	: 10240 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6984.77
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 3501.002
+cache size	: 10240 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6984.77
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 3585.421
+cache size	: 10240 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6984.77
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 3522.072
+cache size	: 10240 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6984.77
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 3445.480
+cache size	: 10240 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6984.77
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 63
+model name	: Intel(R) Xeon(R) CPU E5-1620 v3 @ 3.50GHz
+stepping	: 2
+microcode	: 0x3d
+cpu MHz		: 3555.164
+cache size	: 10240 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 15
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm cpuid_fault epb invpcid_single pti intel_ppin ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid cqm xsaveopt cqm_llc cqm_occup_llc dtherm ida arat pln pts flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf
+bogomips	: 6984.77
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 46 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 65858376k(26398708k free), swap 14647292k(14229756k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.66-b17) for linux-amd64 JRE (1.8.0_66-b17), built on Oct  6 2015 17:28:34 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Thu May  2 13:24:04 2019
+elapsed time: 216 seconds (0d 0h 3m 36s)
+
